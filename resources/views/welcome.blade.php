@@ -7,18 +7,54 @@
 
     <title>Vesta</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src=""></script>
+
 
 
 </head>
 
 <body class="antialiased">
-    <div id="app">
-        Vue 3 + Vite + Laravel 10
-        <hello-world></hello-world>
-    </div>
-</body>
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
+
+    <div id="editor">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var toolbarOptions = [
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+
+            [{ 'header': 1 }, { 'header': 2 }],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'script': 'sub'}, { 'script': 'super' }],
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            [{ 'direction': 'rtl' }],
+
+            [{ 'size': ['small', false, 'large', 'huge'] }],
+            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'font': [] }],
+            [{ 'align': [] }],
+
+            ['clean']
+            ];
+
+            var quill = new Quill('#editor', {
+                            modules: {
+                            syntax: false,
+                            toolbar: toolbarOptions
+                            },
+                            theme: 'snow'
+                        });
+
+            window.quill = quill
+
+        });
+    </script>
+</body>
 </html>
