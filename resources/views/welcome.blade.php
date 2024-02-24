@@ -21,10 +21,12 @@
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 
-
+<!-- div del editor quill y input oculto con su contenido para bbdd -->
     <div id="editor">
     </div>
     <input type="hidden" id="quill_html" name="name"></input>
+
+    <!--Script para editor Quill y campo oculto que se actualiza -->
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             var toolbarOptions = [
