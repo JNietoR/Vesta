@@ -13,6 +13,8 @@
 
 
 
+
+
 </head>
 
 <body class="antialiased">
@@ -22,39 +24,77 @@
 
     <div id="editor">
     </div>
+    <input type="hidden" id="quill_html" name="name"></input>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             var toolbarOptions = [
-            ['bold', 'italic', 'underline', 'strike'],
-            ['blockquote', 'code-block'],
+                ['bold', 'italic', 'underline', 'strike'],
+                ['blockquote', 'code-block'],
 
-            [{ 'header': 1 }, { 'header': 2 }],
-            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-            [{ 'script': 'sub'}, { 'script': 'super' }],
-            [{ 'indent': '-1'}, { 'indent': '+1' }],
-            [{ 'direction': 'rtl' }],
+                [{
+                    'header': 1
+                }, {
+                    'header': 2
+                }],
+                [{
+                    'list': 'ordered'
+                }, {
+                    'list': 'bullet'
+                }],
+                [{
+                    'script': 'sub'
+                }, {
+                    'script': 'super'
+                }],
+                [{
+                    'indent': '-1'
+                }, {
+                    'indent': '+1'
+                }],
+                [{
+                    'direction': 'rtl'
+                }],
 
-            [{ 'size': ['small', false, 'large', 'huge'] }],
-            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                [{
+                    'size': ['small', false, 'large', 'huge']
+                }],
+                [{
+                    'header': [1, 2, 3, 4, 5, 6, false]
+                }],
 
-            [{ 'color': [] }, { 'background': [] }],
-            [{ 'font': [] }],
-            [{ 'align': [] }],
+                [{
+                    'color': []
+                }, {
+                    'background': []
+                }],
+                [{
+                    'font': []
+                }],
+                [{
+                    'align': []
+                }],
 
-            ['clean']
+                ['clean']
             ];
 
             var quill = new Quill('#editor', {
-                            modules: {
-                            syntax: false,
-                            toolbar: toolbarOptions
-                            },
-                            theme: 'snow'
-                        });
+                modules: {
+                    syntax: false,
+                    toolbar: toolbarOptions
+                },
+                theme: 'snow'
+            });
 
             window.quill = quill
 
+            quill.on('text-change', function(delta, oldDelta, source) {
+            document.getElementById("quill_html").value = quill.root.innerHTML;
         });
+
+        });
+
     </script>
+
 </body>
+
 </html>
