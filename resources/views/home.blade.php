@@ -8,7 +8,6 @@
     <title>Vesta</title>
 
     <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
-    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
 </head>
 
 <body class="antialiased">
@@ -23,23 +22,29 @@
     <!--Script para manejar el editor Quill y campo oculto para base de datos -->
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
-            var toolbarOptions = [
-                ['bold', 'italic', 'underline', 'strike'],
-                ['blockquote', 'code-block'],
-                ['link'],
 
+            var toolbarOptions = [
+                [{
+                    'size': ['small', false, 'large', 'huge']
+                }],
+                [{
+                    'header': [1, 2, 3, 4, 5, 6, false]
+                }],
                 [{
                     'header': 1
                 }, {
                     'header': 2
                 }],
+                ['bold', 'italic', 'underline', 'strike'],
+                ['blockquote', 'code-block'],
+                ['link'],
                 [{
                     'indent': '-1'
                 }, {
                     'indent': '+1'
                 }],
                 [{
-                    'align': ['center', 'right', 'justify']
+                    'align': ['', 'center', 'right', 'justify']
 
                 }],
                 [{
@@ -50,13 +55,6 @@
                 }, {
                     'list': 'bullet'
                 }],
-                [{
-                    'size': ['small', false, 'large', 'huge']
-                }],
-                [{
-                    'header': [1, 2, 3, 4, 5, 6, false]
-                }],
-
                 [{
                     'color': []
                 }, {
@@ -73,7 +71,7 @@
             var quill = new Quill('#editor', {
                 modules: {
                     syntax: false,
-                    toolbar: toolbarOptions
+                    toolbar: toolbarOptions,
                 },
                 theme: 'snow'
             });
