@@ -20,7 +20,7 @@
     </div>
     <input type="hidden" id="quill_html" name="name"></input>
 
-    <!--Script para editor Quill y campo oculto que se actualiza -->
+    <!--Script para manejar el editor Quill y campo oculto para base de datos -->
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
             var toolbarOptions = [
