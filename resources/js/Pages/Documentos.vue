@@ -50,7 +50,7 @@ onMounted(() => {
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <!-- Quill Editor -->
-                    <div id="editor"></div>
+                    <div id="editor" class="min-h-96"></div>
                     <input type="hidden" id="quill_html" name="name" v-model="quillHtml"></input>
                     <!-- End Quill Editor -->
                 </div>
