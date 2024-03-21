@@ -242,7 +242,7 @@ defineProps({
 
 
                 
-            <h1 class="text-9xl text-center text-white m-20 p-50 titulo ">VESTA</h1>
+            <h1 class="text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
 
             
             
