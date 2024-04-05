@@ -31,11 +31,24 @@ defineProps({
     <!--contenedor global-->
     <div>
 
+    <div class="container">
         <div id='stars'></div>
         <div id='stars2'></div>
         <div id='stars3'></div>
+        
+    <div class="container">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>  
+    </div>
+    <div class="container">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>  
+    </div>
 
-
+    </div>
+    
         <div
             class=" relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center   selection:bg-red-500 selection:text-white">
             <div v-if="canLogin" class="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
@@ -406,6 +419,15 @@ body {
 
 @media (prefers-color-scheme: dark) {
 
+    .container{
+        width: 100%;
+        max-width: 100%;
+        max-height: fit-content;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
 
     /**PRUEBA FONDO*/
     #stars {
