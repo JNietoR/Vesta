@@ -422,8 +422,7 @@ body {
     .container{
         width: 100%;
         max-width: 100%;
-        max-height: fit-content;
-        height: 600px;
+        
         display: flex;
         justify-content: center;
         margin: auto;
