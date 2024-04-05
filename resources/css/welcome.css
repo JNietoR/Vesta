@@ -1,5 +1,10 @@
 
-
+/*prueba fondo**/
+body {
+  height: auto !important;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%) !important;
+  
+}
 
 .titulo {
     font-family: 'Quicksand';
@@ -65,9 +70,9 @@
     transition: color .2s ease-in-out;
 }
 
-.fondo{
+/*.fondo{
     background-color: black;
-}
+}*/
 
 .flecha{
     animation: float 5s ease-in-out infinite;
@@ -108,3 +113,7 @@
     transform: translateY(0px);
   }
 }
+
+
+
+
