@@ -1,5 +1,6 @@
 <script setup>
 import { Head, Link, } from "@inertiajs/vue3";
+import { ref, onMounted, onBeforeUnmount } from 'vue';//PARALLAX
 
 
 defineProps({
@@ -19,6 +20,45 @@ defineProps({
     },
 });
 
+/**************PARALLAX******************* */
+
+const opacityValue = ref(0);
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
+
+function handleScroll() {
+    opacityValue.value = window.scrollY / 1000;
+}
+/*********************************************** */
+
+/**********************BOTON************************** */
+const animatedButton = ref(null);
+
+onMounted(() => {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animatedButton.value.classList.add('animate__fadeInLeft');
+                } else {
+                    animatedButton.value.classList.remove('animate__backInLeft');
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+        }
+    );
+
+    observer.observe(animatedButton.value);
+});
+
 
 </script>
 
@@ -31,24 +71,24 @@ defineProps({
     <!--contenedor global-->
     <div>
 
-    <div class="container">
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>
-        
-    <div class="container">
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>  
-    </div>
-    <div class="container">
-        <div id='stars'></div>
-        <div id='stars2'></div>
-        <div id='stars3'></div>  
-    </div>
+        <div class="container">
+            <div id='stars'></div>
+            <div id='stars2'></div>
+            <div id='stars3'></div>
 
-    </div>
-    
+            <div class="container">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+            </div>
+            <div class="container">
+                <div id='stars'></div>
+                <div id='stars2'></div>
+                <div id='stars3'></div>
+            </div>
+
+        </div>
+
         <div
             class=" relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center   selection:bg-red-500 selection:text-white">
             <div v-if="canLogin" class="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
@@ -193,13 +233,12 @@ defineProps({
 
 
 
-                <h1 class="text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
 
 
 
                 <!--Descripción de proyecto-->
-                <div class="container-text mx-auto">
-
+                <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
+                    <h2 class="text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h2>
                     <blockquote>
                         <p class="text-2xl description-txt mt-8">
 
@@ -220,11 +259,13 @@ defineProps({
 
 
 
-
-                <div class="flex items-center justify-center my-10 ">
-                    <a class="dark:bg-gray-50/50 p-3 w-36 flex items-center justify-center rounded-full button-hover"
-                        :href="route('login')">Unete</a>
+            <div class="parallax" :style="{ opacity: opacityValue }">
+                    <div class="flex items-center justify-center my-10 animate__animated animate__backInLeft "
+                    ref="animatedButton">
+                    <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
+                    :href="route('login')">Unete</a>
                 </div>
+            </div>
 
                 <section class="my-96">
 
@@ -403,12 +444,12 @@ defineProps({
 /* Oculta la barra de desplazamiento para IE, Edge y Firefox */
 html,
 body {
-    
+
     scrollbar-width: none;
     /* Firefox */
     -ms-overflow-style: none;
     /* IE and Edge */
-    
+
 }
 
 
@@ -419,10 +460,10 @@ body {
 
 @media (prefers-color-scheme: dark) {
 
-    .container{
+    .container {
         width: 100%;
         max-width: 100%;
-        
+
         display: flex;
         justify-content: center;
         margin: auto;
@@ -511,12 +552,128 @@ body {
 
 /* This only changes this particular animation duration */
 .animate__animated.animate__fadeIn {
-    --animate-duration: 2s;
+    --animate-duration: 7s;
 }
 
 /* This changes all the animations globally */
 :root {
-    --animate-duration: 800ms;
-    --animate-delay: 0.9s;
+    --animate-duration: 1000ms;
+    --animate-delay: 1.9s;
+}
+
+
+/**************PARALLAX************************* */
+
+.parallax {
+
+    /**********FONDO POR SI SE PONE, PREGUNTAR************ */
+    /*background-image: url(""); 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-image: fill 0 linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));*/
+    transition: opacity 1s ease-in-out;
+
+}
+
+.parallax div {
+    text-align: center;
+    font-size: 20px;
+    margin: auto;
+    display: flex;
+
+}
+
+.botonparallax:hover{
+    font-weight: bold;
+    scale: 1.1;
+    box-shadow: 2px 3px 4px #000000;
+   /* animation: radius .2s ease-in-out 1.9s infinite;*/
+    
+}
+.button-hover{
+    margin: 0 !important;
+}
+/*.parallax img {
+        transition: transform 0.5s;
+        position: relative;
+        animation: slide 5s ease-in-out infinite;
+        animation-delay: 2s;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 90%;
+        width: 15%;
+        height: 20%;
+
+    }*/
+
+@keyframes slide {
+
+    0%,
+    100% {
+        top: 0;
+    }
+
+    50% {
+        top: 10%;
+    }
+}
+
+/*
+@keyframes radius {
+    0% {
+        border-radius: 50%;
+    }
+
+    50% {
+        border-radius: 30%;
+    }
+
+    100% {
+        border-radius: 5%;
+    }
+    
+}*/
+
+.parallax {
+    display: block;
+    max-width: 100%;
+}
+
+.parallax p {
+    font-size: 18px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    font-weight: bolder;
+    /*background-color: rgba(255, 255, 255, 0.507);*/
+    padding: 3rem;
+    /*box-shadow: 2px 30px 40px #000000;*/
+    transition: 0.5s ease-in-out;
+
+
+
+
+}
+
+
+.parallax h1 {
+    padding: 1rem;
+    font-style: italic;
+    text-shadow: 2px 23px 4px #000000;
+}
+
+hr {
+    height: 300px
+}
+
+
+.parallax p:hover {
+    /*background-color: rgba(0, 0, 0, 0.507);*
+        color: white;
+        box-shadow: 2px 30px 40px #000000;*/
+    transition: 0.5s;
 }
 </style>
