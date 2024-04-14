@@ -11,11 +11,16 @@ export default {
     ],
 
     theme: {
+
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'azulvesta': '#2b4a9d',
+            },
         },
+
     },
 
     plugins: [forms],

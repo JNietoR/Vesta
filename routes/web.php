@@ -73,4 +73,12 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
+
+// Kanban
+Route::get('/kanban', function () {
+    return Inertia::render('Kanban');
+})->middleware(['auth', 'verified'])->name('kanban');
+
+
 require __DIR__ . '/auth.php';
