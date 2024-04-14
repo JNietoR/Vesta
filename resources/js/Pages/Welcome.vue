@@ -47,7 +47,7 @@ onMounted(() => {
                 if (entry.isIntersecting) {
                     animatedButton.value.classList.add('animate__fadeInLeft');
                 } else {
-                    animatedButton.value.classList.remove('animate__backInLeft');
+                    animatedButton.value.classList.remove('animate__fadeInLeft');
                 }
             });
         },
@@ -58,6 +58,30 @@ onMounted(() => {
 
     observer.observe(animatedButton.value);
 });
+
+
+/**************************H2 ANIMADO*************************/
+const animatedH2 = ref(null);
+
+onMounted(() =>{
+    
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animatedH2.value.classList.add('animate__fadeInRight');
+                    } else {
+                        animatedH2.value.classList.remove('animate__fadeInRight');
+                    }
+                });
+            },
+            {
+                threshold: 0.1,
+            }
+        );
+    
+        observer.observe(animatedH2.value);
+    });
 
 
 </script>
@@ -267,8 +291,11 @@ onMounted(() => {
                 </div>
             </div>
 
-                <section class="my-96">
+                <section class="my-80 parallax2" :style="{ opacity: opacityValue }">
 
+                    <div>
+                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight" ref="animatedH2">¿Que ofrece Vesta?</h2>
+                    </div>
                     <div class="mt-16">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                             <a href="https://laravel.com/docs"
@@ -577,6 +604,9 @@ body {
 
 }
 
+.parallax2{
+    transition: opacity 1s ease-in-out;
+}
 .parallax div {
     text-align: center;
     font-size: 20px;
@@ -651,11 +681,7 @@ body {
     /*background-color: rgba(255, 255, 255, 0.507);*/
     padding: 3rem;
     /*box-shadow: 2px 30px 40px #000000;*/
-    transition: 0.5s ease-in-out;
-
-
-
-
+    transition: 0.5s ease-in-out
 }
 
 
