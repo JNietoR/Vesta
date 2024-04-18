@@ -38,6 +38,9 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('possit')" :active="route().current('possit')">
                                     Possit
                                 </NavLink>
+                                <NavLink :href="route('kanban')" :active="route().current('kanban')">
+                                    Kanban
+                                </NavLink>
                             </div>
                         </div>
 
