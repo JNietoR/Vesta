@@ -19,7 +19,15 @@
                             <table>
                                 <!-- Itera sobre los documentos y muestra cada uno -->
                                 <tr v-for="documento in documentos" :key="documento.id">
-                                    <td><Link :href="`/documentos/${documento.id}/edit`" class="text-blue-500 hover:underline">{{ documento.nombre }}</Link></td><td>Editar</td><td>Eliminar</td>
+                                    <td><Link :href="`/documentos/${documento.id}/edit`" class="text-blue-500 hover:underline">{{ documento.nombre }}</Link></td>
+                                    <td><Link :href="`/documentos/${documento.id}/edit`" class="text-blue-500 hover:underline"><PencilSquareIcon class="w-5 h-5"/></Link></td>
+                                    <td>
+                                        <form @submit.prevent="submitForm(documento.id)">
+                                            <button type="submit" class="text-red-500 hover:text-red-700">
+                                                <TrashIcon class="w-5 h-5" />
+                                            </button>
+                                        </form>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -33,14 +41,27 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
-import {useForm} from '@inertiajs/vue3';
+import { useForm } from '@inertiajs/vue3';
+import { TrashIcon, PencilSquareIcon } from '@heroicons/vue/24/solid';
 
 const form = useForm({});
 const props = defineProps({
-    documentos:{type:Object}
+    documentos: { type: Object }
 });
 
 const navigateToCreateDocumento = () => {
     return '/documentos/create';
 }
+
+// Función para enviar el formulario para eliminar el documento
+const submitForm = (documentoId) => {
+    if (confirm('¿Estás seguro de que deseas eliminar este documento?')) {
+        form.delete(`/documentos/${documentoId}`, {
+            onSuccess: () => {
+                console.log('Documento eliminado exitosamente');
+                // Redirigir a la página de documentos o realizar otra acción deseada
+            },
+        });
+    }
+};
 </script>
