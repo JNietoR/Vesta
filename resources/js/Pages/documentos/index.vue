@@ -18,8 +18,11 @@
                             <h3 class="text-lg font-semibold mb-2">Mis Documentos</h3>
                             <table>
                                 <!-- Itera sobre los documentos y muestra cada uno -->
+                                <th>Título</th>
+                                <th>Editar</th>
+                                <th>Eliminar</th>
                                 <tr v-for="documento in documentos" :key="documento.id">
-                                    <td><Link :href="`/documentos/${documento.id}/edit`" class="text-blue-500 hover:underline">{{ documento.nombre }}</Link></td>
+                                    <td>{{ documento.nombre }}</td>
                                     <td><Link :href="`/documentos/${documento.id}/edit`" class="text-blue-500 hover:underline"><PencilSquareIcon class="w-5 h-5"/></Link></td>
                                     <td>
                                         <form @submit.prevent="submitForm(documento.id)">
