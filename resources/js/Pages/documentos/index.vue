@@ -16,12 +16,12 @@
                         <!-- Lista de documentos -->
                         <div class="mt-4">
                             <h3 class="text-lg font-semibold mb-2">Mis Documentos</h3>
-                            <ul>
+                            <table>
                                 <!-- Itera sobre los documentos y muestra cada uno -->
-                                <li v-for="documento in documentos" :key="documento.id">
-                                    <Link :href="`/documentos/${documento.id}/edit`" class="text-blue-500 hover:underline">{{ documento.nombre }}</Link>
-                                </li>
-                            </ul>
+                                <tr v-for="documento in documentos" :key="documento.id">
+                                    <td><Link :href="`/documentos/${documento.id}/edit`" class="text-blue-500 hover:underline">{{ documento.nombre }}</Link></td><td>Editar</td><td>Eliminar</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
