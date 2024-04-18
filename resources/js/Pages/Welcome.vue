@@ -1,6 +1,7 @@
 <script setup>
 import { Head, Link } from "@inertiajs/vue3";
 
+
 defineProps({
     canLogin: {
         type: Boolean,
@@ -23,7 +24,7 @@ defineProps({
     <Head title="Welcome" />
 
     <div
-        class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"
+        class=" fondo relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white"
     >
         <div v-if="canLogin" class="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
             <Link
@@ -49,10 +50,12 @@ defineProps({
             </template>
         </div>
 
+
+
         <div class="max-w-7xl mx-auto p-6 lg:p-8">
-            <div class="flex justify-center">
+            <div class="flex justify-center ">
                 <svg
-                    class="h-16 w-auto bg-gray-100 dark:bg-gray-900"
+                    class="animate__animated animate__fadeIn max-w-2xl flex justify-center mx-auto  p-6 lg:p-8 "
                     version="1.1"
                     id="Layer_1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -216,10 +219,60 @@ defineProps({
                         d="M356.4,422.1c1.9-4.5,3.4-9,4.8-13.9c0.3-1.1,0.6-1.1,1,0c1.3,4.7-2.6,10.9-5.3,14.2
 	C356.1,423.4,355.9,423.3,356.4,422.1z"
                     />
+                    
                 </svg>
+                
+                
             </div>
 
-            <div class="mt-16">
+    <!--flechitas-->
+    <div class="container-flechas">
+        <div class="flex justify-center">
+                <div class="flex justify-center">
+                    <img class="w-40 flecha -mt-10 " src="../../../public/assets/images/flecha.png" alt=""/>
+                </div>
+        </div>
+        <div class="flex justify-center">
+                <div class="flex justify-center">
+                    <img class="w-40 mx-auto flecha2" src="../../../public/assets/images/flecha.png" alt=""/>
+                </div>
+        </div>
+    </div>
+
+
+
+                
+            <h1 class="text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
+
+            
+            
+            <!--Descripción de proyecto-->
+            <div class="container-text mx-auto">
+                
+                <blockquote>
+                    <p class="text-2xl description-txt mt-8">
+                
+                        <q>
+                            <i>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam quam aperiam voluptatem iure ab aspernatur eum quidem, est provident impedit corporis, iste atque eveniet corrupti accusamus voluptatibus ullam ea.
+                            </i>
+                        </q>
+                    </p>
+                </blockquote>
+            </div>
+            
+          
+            
+
+
+            
+                <div class="flex items-center justify-center my-10 ">
+                    <a class="dark:bg-gray-50/50 p-3 w-36 flex items-center justify-center rounded-full button-hover" :href="route('login')">Unete</a>
+                </div>
+
+            <section class="my-96">
+                
+                <div class="mt-16">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                     <a
                         href="https://laravel.com/docs"
@@ -474,7 +527,9 @@ defineProps({
                     </div>
                 </div>
             </div>
+            </section>
 
+            <!--footer-->
             <div
                 class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between"
             >
@@ -487,10 +542,15 @@ defineProps({
                 </div>
             </div>
         </div>
+        
     </div>
+
 </template>
 
 <style>
+
+@import 'animate.css';
+
 .bg-dots-darker {
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E");
 }
@@ -499,4 +559,25 @@ defineProps({
         background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
     }
 }
+
+.my-element {
+    display: inline-block;
+    margin: 0 0.5rem;
+  
+    animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+  
+  /* This only changes this particular animation duration */
+.animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+  }
+  
+  /* This changes all the animations globally */
+  :root {
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+  }
+
+
 </style>
