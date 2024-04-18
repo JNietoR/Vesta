@@ -2,31 +2,33 @@
     <AuthenticatedLayout>
 
         <Head title="Crear Documento" />
-
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <form @submit.prevent="submitForm">
-                    <div>
-                        <label for="nombre" class="block font-medium text-sm text-gray-700">Nombre del Documento</label>
-                        <input type="text" name="nombre" id="nombre" v-model="form.nombre" required
-                            class="mt-1 p-2 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-                        <InputError :message="form.errors.nombre" />
-                    </div>
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                    <form @submit.prevent="submitForm" class="p-4">
+                        <div>
+                            <label for="nombre" class="block font-medium text-sm text-gray-700">Nombre del
+                                Documento</label>
+                            <input type="text" name="nombre" id="nombre" v-model="form.nombre" required
+                                class="mt-1 p-2 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                            <InputError :message="form.errors.nombre" />
+                        </div>
 
-                    <!-- Campo oculto para almacenar el contenido de Quill -->
-                    <input type="hidden" name="contenido" v-model="form.contenido">
-                    <input type="hidden" name="user_id" v-model="form.userId">
+                        <!-- Campo oculto para almacenar el contenido de Quill -->
+                        <input type="hidden" name="contenido" v-model="form.contenido">
+                        <input type="hidden" name="user_id" v-model="form.userId">
 
-                    <div class="mt-4">
-                        <label for="contenido" class="block font-medium text-sm text-gray-700">Contenido del
-                            Documento</label>
-                        <div id="editor" class="min-h-96"></div>
-                    </div>
+                        <div class="mt-4">
+                            <label for="contenido" class="block font-medium text-sm text-gray-700">Contenido del
+                                Documento</label>
+                            <div id="editor" class="min-h-96"></div>
+                        </div>
 
-                    <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Guardar
-                        Documento</button>
-                </form>
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">Guardar
+                            Documento</button>
+                    </form>
+                </div>
             </div>
         </div>
     </AuthenticatedLayout>

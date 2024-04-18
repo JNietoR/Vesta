@@ -2,10 +2,10 @@
     <AuthenticatedLayout>
 
         <Head title="Editar Documento" />
-
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <form @submit.prevent="submitForm">
+                <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <form @submit.prevent="submitForm" class="p-4">
                     <div>
                         <label for="nombre" class="block font-medium text-sm text-gray-700">Nombre del Documento</label>
                         <input type="text" name="nombre" id="nombre" v-model="documento.nombre" required
@@ -23,10 +23,12 @@
                     </div>
 
                     <button type="submit"
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Guardar Documento</button>
+                        class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">Guardar Documento</button>
                 </form>
             </div>
         </div>
+        </div>
+
     </AuthenticatedLayout>
 </template>
 
