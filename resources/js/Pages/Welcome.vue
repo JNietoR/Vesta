@@ -45,9 +45,9 @@ onMounted(() => {
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    animatedButton.value.classList.add('animate__fadeInLeft');
+                    animatedButton.value.classList.add('animate__fadeIn');
                 } else {
-                    animatedButton.value.classList.remove('animate__fadeInLeft');
+                    animatedButton.value.classList.remove('animate__fadeIn');
                 }
             });
         },
@@ -284,7 +284,7 @@ onMounted(() =>{
 
 
             <div class="parallax" :style="{ opacity: opacityValue }">
-                    <div class="flex items-center justify-center my-10 animate__animated animate__backInLeft "
+                    <div class="flex items-center justify-center my-10 animate__animated animate__fadeIn"
                     ref="animatedButton">
                     <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
                     :href="route('login')">Unete</a>
@@ -294,7 +294,7 @@ onMounted(() =>{
                 <section class="my-80 parallax2" :style="{ opacity: opacityValue }">
 
                     <div>
-                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight" ref="animatedH2">¿Que ofrece Vesta?</h2>
+                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight" ref="animatedH2">¿Qué ofrece Vesta?</h2>
                     </div>
                     <div class="mt-16">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
