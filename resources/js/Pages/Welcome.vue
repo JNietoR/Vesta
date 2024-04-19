@@ -63,25 +63,25 @@ onMounted(() => {
 /**************************H2 ANIMADO*************************/
 const animatedH2 = ref(null);
 
-onMounted(() =>{
-    
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        animatedH2.value.classList.add('animate__fadeInRight');
-                    } else {
-                        animatedH2.value.classList.remove('animate__fadeInRight');
-                    }
-                });
-            },
-            {
-                threshold: 0.1,
-            }
-        );
-    
-        observer.observe(animatedH2.value);
-    });
+onMounted(() => {
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animatedH2.value.classList.add('animate__fadeInRight');
+                } else {
+                    animatedH2.value.classList.remove('animate__fadeInRight');
+                }
+            });
+        },
+        {
+            threshold: 0.1,
+        }
+    );
+
+    observer.observe(animatedH2.value);
+});
 
 
 </script>
@@ -260,19 +260,17 @@ onMounted(() =>{
 
 
 
-                <!--Descripción de proyecto-->
+                <!--DESCRIPCION DEL PROYECTO-->
                 <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
                     <h2 class="text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h2>
                     <blockquote>
-                        <p class="text-2xl description-txt mt-8">
-
+                        <p class="font-extralight text-2xl description-txt mt-8">
                             <q>
                                 <i>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam quam
-                                    aperiam
-                                    voluptatem iure ab aspernatur eum quidem, est provident impedit corporis, iste atque
-                                    eveniet
-                                    corrupti accusamus voluptatibus ullam ea.
+                                    “La sabiduría no es solo conocimiento, sino la capacidad de aplicar ese conocimiento
+                                    de manera
+                                    efectiva.”
+                                    --Brandon Sanderson (19-12-1975 - Actualidad).
                                 </i>
                             </q>
                         </p>
@@ -283,48 +281,48 @@ onMounted(() =>{
 
 
 
-            <div class="parallax" :style="{ opacity: opacityValue }">
+                <div class="parallax" :style="{ opacity: opacityValue }">
                     <div class="flex items-center justify-center my-10 animate__animated animate__fadeIn"
-                    ref="animatedButton">
-                    <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                    :href="route('login')">Unete</a>
+                        ref="animatedButton">
+                        <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
+                            :href="route('login')">Unete</a>
+                    </div>
                 </div>
-            </div>
 
-                <section class="my-80 parallax2" :style="{ opacity: opacityValue }">
+                <section class="my-75 parallax2" :style="{ opacity: opacityValue }">
 
                     <div>
-                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight" ref="animatedH2">¿Qué ofrece Vesta?</h2>
+                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
+                            ref="animatedH2">
+                            ¿Qué ofrece Vesta?</h2>
                     </div>
+                    <!----SECCION DE CARTAS-->
                     <div class="mt-16">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                        <div class="iconos">
                             <a href="https://laravel.com/docs"
                                 class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                                 <div>
-                                    <div
-                                        class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                    <div class="h-16 w-16 flex items-center justify-center rounded-full">
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="none">
+                                            <path fill="#b3e7ff"
+                                                d="M64 32C64 14.3 49.7 0 32 0S0 14.3 0 32v96V384c0 35.3 28.7 64 64 64H256V384H64V160H256V96H64V32zM288 192c0 17.7 14.3 32 32 32H544c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32H445.3c-8.5 0-16.6-3.4-22.6-9.4L409.4 9.4c-6-6-14.1-9.4-22.6-9.4H320c-17.7 0-32 14.3-32 32V192zm0 288c0 17.7 14.3 32 32 32H544c17.7 0 32-14.3 32-32V352c0-17.7-14.3-32-32-32H445.3c-8.5 0-16.6-3.4-22.6-9.4l-13.3-13.3c-6-6-14.1-9.4-22.6-9.4H320c-17.7 0-32 14.3-32 32V480z" />
                                         </svg>
+
                                     </div>
 
                                     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
-                                        Documentation
+                                        Organiza tu trabajo
                                     </h2>
 
                                     <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                        Laravel has wonderful documentation covering
-                                        every aspect of the framework. Whether you are a
-                                        newcomer or have prior experience with Laravel,
-                                        we recommend reading our documentation from
-                                        beginning to end.
+                                        texto descriptivo
                                     </p>
                                 </div>
 
+                                <!--flecha-->
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
+                                    stroke-width="1.5" class="self-center shrink-0 stroke-blue-400 w-6 h-6 mx-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                                 </svg>
@@ -336,21 +334,19 @@ onMounted(() =>{
                                     <div
                                         class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" class="w-7 h-7 stroke-red-500">
+                                            stroke-width="1.5" class="w-7 h-7 stroke-blue-400">
                                             <path stroke-linecap="round"
                                                 d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
                                         </svg>
+
                                     </div>
 
                                     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
-                                        Laracasts
+                                        Optimiza tu tiempo
                                     </h2>
 
                                     <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                        Laracasts offers thousands of video tutorials on
-                                        Laravel, PHP, and JavaScript development. Check
-                                        them out, see for yourself, and massively level
-                                        up your development skills in the process.
+                                        texto descriptivo
                                     </p>
                                 </div>
 
@@ -378,10 +374,7 @@ onMounted(() =>{
                                     </h2>
 
                                     <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                        Laravel News is a community driven portal and
-                                        newsletter aggregating all of the latest and
-                                        most important news in the Laravel ecosystem,
-                                        including new package releases and tutorials.
+                                        texto descriptivo
                                     </p>
                                 </div>
 
@@ -409,33 +402,7 @@ onMounted(() =>{
                                     </h2>
 
                                     <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                        Laravel's robust library of first-party tools
-                                        and libraries, such as
-                                        <a href="https://forge.laravel.com"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>,
-                                        <a href="https://vapor.laravel.com"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>,
-                                        <a href="https://nova.laravel.com"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>,
-                                        and
-                                        <a href="https://envoyer.io"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a>
-                                        help you take your projects to the next level.
-                                        Pair them with powerful open source libraries
-                                        like
-                                        <a href="https://laravel.com/docs/billing"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>,
-                                        <a href="https://laravel.com/docs/dusk"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>,
-                                        <a href="https://laravel.com/docs/broadcasting"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>,
-                                        <a href="https://laravel.com/docs/horizon"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>,
-                                        <a href="https://laravel.com/docs/sanctum"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>,
-                                        <a href="https://laravel.com/docs/telescope"
-                                            class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>,
-                                        and more.
+                                        texto descriptivo
                                     </p>
                                 </div>
                             </div>
@@ -604,9 +571,10 @@ body {
 
 }
 
-.parallax2{
+.parallax2 {
     transition: opacity 1s ease-in-out;
 }
+
 .parallax div {
     text-align: center;
     font-size: 20px;
@@ -615,16 +583,18 @@ body {
 
 }
 
-.botonparallax:hover{
+.botonparallax:hover {
     font-weight: bold;
     scale: 1.1;
     box-shadow: 2px 3px 4px #000000;
-   /* animation: radius .2s ease-in-out 1.9s infinite;*/
-    
+    /* animation: radius .2s ease-in-out 1.9s infinite;*/
+
 }
-.button-hover{
+
+.button-hover {
     margin: 0 !important;
 }
+
 /*.parallax img {
         transition: transform 0.5s;
         position: relative;
@@ -677,7 +647,6 @@ body {
     border-radius: 10px;
     color: white;
     text-shadow: 2px 2px 4px #000000;
-    font-weight: bolder;
     /*background-color: rgba(255, 255, 255, 0.507);*/
     padding: 3rem;
     /*box-shadow: 2px 30px 40px #000000;*/

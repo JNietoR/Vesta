@@ -6,6 +6,16 @@ body {
   
 }
 
+.iconos{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+.colorIcons{
+  color: #b3e7ff;
+}
+
 .titulo {
     font-family: 'Quicksand';
     font-style: normal;
