@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\DocumentoController;
 use App\Models\Documento;
+use App\Http\Controllers\BoardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,9 +77,11 @@ Route::middleware('auth')->group(function () {
 
 
 // Kanban
-Route::get('/kanban', function () {
-    return Inertia::render('Kanban');
-})->middleware(['auth', 'verified'])->name('kanban');
 
+
+Route::group(['middleware' => ['auth', 'verified']], function() {
+    Route::get('/board', [BoardController::class, 'show'])->name('boards.show');
+    Route::get('/boards', [BoardController::class, 'index'])->name('boards');
+});
 
 require __DIR__ . '/auth.php';
