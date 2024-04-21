@@ -51,12 +51,18 @@ defineProps({
 
         <div class="max-w-7xl mx-auto p-6 lg:p-8">
             <div class="mt-16">
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    <h2>Diosa del Hogar y la Organización</h2>
-                    <blockquote>
-                        <i>''La herramienta definitiva para la gestión de tu vida laboral y personal''</i>
-                    </blockquote>
+                <div class="flex-container">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                        <div class="text-container">
+                            <h2>Diosa del Hogar y la Organización</h2>
+                            <blockquote>
+                                <i>''La herramienta definitiva para la gestión de tu vida laboral y personal''</i>
+                            </blockquote>
+                        </div>
+                        <div class="imagen-container">
+                            <img src="/storage/logo/LogoBlanco.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,6 +70,23 @@ defineProps({
 </template>
 
 <style>
+@import 'animate.css';
+
+/* Oculta la barra de desplazamiento para Chrome, Safari y Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+/* Oculta la barra de desplazamiento para IE, Edge y Firefox */
+html,
+body {
+
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+
+}
+
 .bg-dots-darker {
     background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E");
 }
