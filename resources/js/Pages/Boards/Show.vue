@@ -1,23 +1,21 @@
 <script setup>
+import {EllipsisHorizontalIcon} from '@heroicons/vue/24/solid'
+
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-
-import { Head } from '@inertiajs/vue3';
-
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue';
-
-import { EllipsisHorizontalIcon, PencilIcon, PlusIcon } from '@heroicons/vue/24/solid';
 
 import BoardNameForm from '@/Pages/Boards/BoardNameForm.vue';
 import CardListCreateForm from '@/Pages/Boards/CardListCreateForm.vue';
-import CardList from './CardList.vue';
+import CardList from "@/Pages/Boards/CardList.vue";
+import CardListItemModal from "@/Pages/Boards/CardListItemModal.vue";
 
 const props = defineProps({
-  board: Object
+  board: Object,
+  card: Object
 });
 </script>
 <template>
   <AuthenticatedLayout>
-    <div class="flex flex-col h-full bg-azulvesta">
+    <div class="flex flex-col h-full bg-blue-600">
       <div class="shrink-0 flex flex-wrap justify-between items-center p-4">
         <BoardNameForm :board="board"/>
         <div>
@@ -36,15 +34,15 @@ const props = defineProps({
             :list="list"
             class="w-72 bg-gray-200 max-h-full flex flex-col rounded-md"
           >
-
           </CardList>
 
           <div class="w-72">
-
             <CardListCreateForm :board="board"/>
           </div>
         </div>
       </div>
     </div>
+
+    <CardListItemModal :card="props.card"/>
   </AuthenticatedLayout>
 </template>

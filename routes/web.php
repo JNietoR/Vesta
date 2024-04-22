@@ -81,15 +81,16 @@ Route::middleware('auth')->group(function () {
 // Kanban
 
 Route::group(['middleware' => ['auth', 'verified']], function() {
-    Route::get('/boards/{board}', [BoardController::class, 'show'])->name('boards.show');
+    Route::get('/boards/{board}/{card?}', [BoardController::class, 'show'])->name('boards.show');
     Route::put('/boards/{board}', [BoardController::class, 'update'])->name('boards.update');
     Route::get('/boards', [BoardController::class, 'index'])->name('boards');
     Route::post('/boards', [BoardController::class, 'store'])->name('boards.store');
 
     Route::post('/boards/{board}/lists', [CardListController::class, 'store'])->name('cardLists.store');
     Route::post('/cards', [CardController::class, 'store'])->name('cards.store');
+    Route::put('/cards/{card}', [CardController::class, 'update'])->name('cards.update');
+    Route::put('/cards/{card}/move', [CardController::class, 'move'])->name('cards.move');
+    Route::delete('/cards/{card}', [CardController::class, 'destroy'])->name('cards.destroy');
 });
-
-
 
 require __DIR__ . '/auth.php';
