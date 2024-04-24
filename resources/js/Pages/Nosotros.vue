@@ -62,6 +62,10 @@ defineProps({
                         <div class="imagen-container">
                             <img src="/storage/logo/LogoBlanco.svg">
                         </div>
+                        <div class="texto-creadores">
+                            <h5>Creadores</h5>
+                            <h3>¿Quienés somos?</h3>
+                        </div>
                     </div>
                 </div>
             </div>

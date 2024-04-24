@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 h2 {
     font-family: "Anton", sans-serif;
@@ -10,10 +10,10 @@ h2 {
     text-align: left;
     margin: 0;
     padding: 0;
-    margin-top: 10%;
+    margin-top: -10%;
 }
 
-blockquote{
+blockquote {
     color: white;
     font-size: 1vw;
     position: relative;
@@ -32,12 +32,47 @@ blockquote{
     position: relative;
     z-index: 99;
     display: flex;
-    bottom:5vw;
+    bottom: 5vw;
     max-width: 100%;
     height: auto;
+    width: 500px;
+    height: 500px;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    scale: 130%;
+}
+
+.imagen-container > img {
+    clip-path: inset(90px 40px 90px 40px);
 }
 
 .imagen-container img {
     max-width: 100%;
     height: auto;
 }
+
+.texto-creadores {
+    text-align: center;
+    grid-column: span 2;
+}
+
+h5 {
+    color: #abd9d9;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 2.2vw;
+}
+
