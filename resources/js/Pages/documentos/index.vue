@@ -99,7 +99,6 @@ const navigateToCreateDocumento = () => {
 }
 
 // Función para formatear la fecha en "día mes año"
-// Función para formatear la fecha en "día/mes/año"
 const formatDate = (dateString) => {
     const date = new Date(dateString);
     const day = date.getDate().toString().padStart(2, '0');
@@ -110,15 +109,14 @@ const formatDate = (dateString) => {
 
 // Función para enviar el formulario para eliminar el documento
 const submitForm = (documentoId) => {
-    if (confirm('¿Estás seguro de que deseas eliminar este documento?')) {
         form.delete(`/documentos/${documentoId}`, {
             onSuccess: () => {
                 console.log('Documento eliminado exitosamente');
                 // Redirigir a la página de documentos o realizar otra acción deseada
             },
         });
-    }
 };
+
 // Función para cambiar el estado de favorito del documento
 const toggleFavorito = (documentoId, favorito) => {
     // Envía una solicitud PUT al servidor para actualizar el estado de favorito del documento
