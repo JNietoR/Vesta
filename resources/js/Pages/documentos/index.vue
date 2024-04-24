@@ -18,13 +18,13 @@
                                 </Link>
                             </div>
 
-                            <table class="text-left border border-gray-200 divide-y divide-gray-200">
+                            <table class="text-left border border-gray-200 divide-y divide-gray-200 ">
                                 <!-- Encabezados de la tabla -->
                                 <thead>
                                     <tr>
                                         <th class="py-3 px-6 text-left" style="width: 40%">Título</th>
-                                        <th class="py-3 px-6 text-left" style="width: 20%">F. Creación</th>
-                                        <th class="py-3 px-6 text-left" style="width: 20%">F. Actualización</th>
+                                        <th class="oculta py-3 px-6 text-left" style="width: 20%">F. Creación</th>
+                                        <th class="oculta py-3 px-6 text-left" style="width: 20%">F. Actualización</th>
                                         <th class="py-3 px-6 text-center" style="width: 10%">Favorito</th>
                                         <th class="py-3 px-6 text-center" style="width: 10%">Editar</th>
                                         <th class="py-3 px-6 text-center" style="width: 10%">Eliminar</th>
@@ -36,8 +36,8 @@
                                     <tr v-for="(documento, index) in documentos" :key="documento.id"
                                         :class="index % 2 === 0 ? 'bg-gray-100' : ''">
                                         <td class="py-4 px-6">{{ documento.nombre }}</td>
-                                        <td class="py-4 px-6">{{ formatDate(documento.created_at) }}</td>
-                                        <td class="py-4 px-6">{{ formatDate(documento.updated_at) }}</td>
+                                        <td class=" oculta py-4 px-6">{{ formatDate(documento.created_at) }}</td>
+                                        <td class=" oculta py-4 px-6">{{ formatDate(documento.updated_at) }}</td>
                                         <td class="py-4 px-6 text-center">
                                             <button @click="toggleFavorito(documento.id, documento.favorito)">
 
@@ -125,3 +125,4 @@ const toggleFavorito = (documentoId, favorito) => {
     });
 };
 </script>
+

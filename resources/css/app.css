@@ -2,5 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@media(max-width:767px){
+    .oculta{
+    display: none;
+  
+
+}
+}
 
 
