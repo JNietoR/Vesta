@@ -53,6 +53,8 @@ Route::get('/documentos/create', function () {
     return Inertia::render('documentos/create');
 })->middleware(['auth', 'verified'])->name('CrearDocumento');
 
+Route::put('/documentos/{id}/toggle-favorito', [DocumentoController::class, 'toggleFavorito'])->name('documentos.toggle-favorito');
+
 //Route::get('/documentos/{documento}', function ($documento) {
 //    return Inertia::render('ShowDocumento', compact('documento'));
 //})->middleware(['auth', 'verified'])->name('ShowDocumento');
