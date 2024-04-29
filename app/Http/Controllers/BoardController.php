@@ -18,7 +18,7 @@ class BoardController extends Controller
     public function show(Board $board, Card $card = null)
     {
         $board->load([
-            'lists.cards' => fn($query) => $query->orderBy('position')
+            'lists.cards' => fn ($query) => $query->orderBy('position')
         ]);
 
         return Inertia::render('Boards/Show', [
@@ -50,5 +50,11 @@ class BoardController extends Controller
         ]);
 
         return redirect()->back();
+    }
+    public function destroy(Board $board)
+    {
+        $board->delete();
+
+        return redirect()->route('boards');
     }
 }

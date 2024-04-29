@@ -35,6 +35,9 @@ function closeModal() {
 function onSubmit() {
   form.put(route('cards.update', {card: props.card.id}));
 }
+
+
+
 </script>
 
 <template>

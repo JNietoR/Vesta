@@ -21,4 +21,12 @@ class CardListController extends Controller
 
         return redirect()->back();
     }
+
+    public function destroy(CardList $list)
+    {
+        $boardId = $list->board_id;
+        $list->delete();
+
+        return redirect()->route('boards.show', ['board' => $boardId]);
+    }
 }
