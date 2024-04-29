@@ -406,21 +406,170 @@ onMounted(() => {
                 </section>
                 <!----GALERIA---->
                 <section>
+
                     <div>
                         <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
                             ref="animatedH2">
-                            ¿Qué más ofrece Vesta?
+                            ¿El futuro de Vesta?
                         </h2>
                     </div>
-                    <div class="grid-gallery">
-                        <a class="grid-gallery__item" href="#">
-                            <img class="grid-gallery__image" src="../../../public/assets/images/LOGO-GOOGLE.png">
-                        </a>
-                        <a class="grid-gallery__item" href="#">
-                            <img class="grid-gallery__image" src="">
-                        </a>
+
+
+                    <div class="contenedor-derecha">
+                            <div class="flex items-center justify-end my-10 animate__animated animate__fadeIn"
+                            ref="animatedButton">
+                            <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
+                                :href="route('login')">Unete</a>
+                    </div>
+
+                        <div class="contenedor-txt">
+                            <blockquote class="flex items-center justify-end my-10 animate__animated animate__fadeIn w-40 text-white">
+                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum libero itaque aliquam
+                                    repudiandae
+                                    eligendi vero, qui accusantium quibusdam consequatur, ipsa ad tenetur cupiditate
+                                    molestias! Eius ut
+                                    nulla vel dolores quaerat!
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    
+                    
                         
-                        ...
+
+                    <div class="grid-container">
+                        <div class="grid-item grid-item-1">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-2">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-3">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-4">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-5">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+
+                        </div>
+                        <div class="grid-item grid-item-6">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-7">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-8">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-9">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+
+
+                        <div class="grid-item grid-item-10">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+
+                        <div class="grid-item grid-item-11">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+
+
+                        <div class="grid-item grid-item-12">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-13">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div class="grid-item grid-item-14">
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img class="grid-gallery__image"
+                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363">
+                                <h2>Titulo</h2>
+                                <p>descripción</p>
+                            </a>
+                        </div>
                     </div>
 
                 </section>
@@ -461,7 +610,7 @@ body {
 
 }
 
-/****GALERIA */
+/****GALERIA *
 .grid-gallery {
     display: grid;
     grid-auto-rows: 200px;
@@ -492,7 +641,7 @@ body {
 }
 
 .grid-gallery__item:nth-child(11n+4) {
-    grid-column: span 2;
+    grid-column: span 1;
     grid-row: span 1;
 }
 
@@ -513,14 +662,217 @@ body {
 
 .grid-gallery__item:nth-child(11n+9) {
     grid-row: span 3;
-}
+}*/
 
+/***TAMAÑO ICONOS* *
 .grid-gallery__image {
-    width: 50%;
-    height: 50%;
+    width: 10%;
+    height:10%;
     object-fit: cover;
+    background-color: #1b2735;
+    padding: 1em;
+    border-radius: 10px;
+    transition: all 0.5s ease;
 }
 
+.grid-gallery__image:hover {
+    transform: scale(1.1);
+    border: 1px solid #ffffff2a;
+    box-shadow: 0 0 80px #5271ff;
+}*/
+
+
+
+.grid-container {
+    display: grid;
+    place-content: center;
+    max-width: 900px;
+    margin: 1rem;
+    grid-auto-columns: 1fr;
+    gap: .5rem;
+    grid-template-areas:
+        "box1  box2  box3  box4  box5  box5"
+        "box6  box6  box7  box7  box8  box9"
+        "box10 box11 box7  box7  box8  box9"
+        "box12 box12 box13 box13 box14 box14";
+}
+
+.grid-container p {
+    font-size: .75rem;
+}
+
+.grid-item {
+    background-color: #1b2735;
+    padding: .5rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: .75rem;
+    overflow: hidden;
+    transition: all 200ms ease;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    outline: 1px solid #2b4a9d;
+
+}
+
+.contenedor-txt{
+    display: flex;
+    justify-content: end;
+    float: right;
+    width: 24%;
+}
+
+.contenedor-txt p{
+    color: white;
+    font-size: 1rem;
+}
+
+/******HACER RESPONSIVE EN MOVIL***** */
+.contenedor-derecha{
+    position: relative;
+    top: 100px;
+}
+
+.grid-item-1 {
+    grid-area: box1;
+}
+
+.grid-item-2 {
+    grid-area: box2;
+}
+
+.grid-item-3 {
+    grid-area: box3;
+}
+
+.grid-item-4 {
+    grid-area: box4;
+}
+
+.grid-item-5 {
+    grid-area: box5;
+}
+
+.grid-item-6 {
+    grid-area: box6;
+}
+
+.grid-item-7 {
+    grid-area: box7;
+}
+
+.grid-item-8 {
+    grid-area: box8;
+}
+
+.grid-item-9 {
+    grid-area: box9;
+}
+
+.grid-item-10 {
+    grid-area: box10;
+}
+
+.grid-item-11 {
+    grid-area: box11;
+}
+
+.grid-item-12 {
+    grid-area: box12;
+}
+
+.grid-item-13 {
+    grid-area: box13;
+}
+
+.grid-item-14 {
+    grid-area: box14;
+}
+
+.grid-item-7 .background {
+    background-color: #000000;
+    height: 100%;
+    font-size: 4rem;
+    display: grid;
+    place-content: center;
+    border-radius: .35rem;
+}
+
+.grid-item-7 .background h2 {
+    background-color: #1b2735;
+    background: linear-gradient(to right, #2b4a9d 10%, #2b4a9d 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.grid-item-7 .background p {
+    -webkit-text-fill-color: #ffffff;
+}
+
+.grid-item-8 p,
+.grid-item-9 p {
+    font-size: 1rem;
+}
+
+.grid-container h2 {
+    background-color: #1b2735;
+    background: linear-gradient(to right, #2b4a9d 10%, #2b4a9d 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: auto;
+    font-size: 2.5rem;
+}
+
+.grid-item img {
+    width: 30%;
+    margin: auto;
+}
+
+@media (max-width:768px) {
+    .grid-container {
+        display: block;
+        width: 93%;
+    }
+
+    .grid-item img {
+        width: 30%;
+        margin: auto;
+    }
+
+    .grid-item {
+        padding: 1em 1rem;
+        margin-bottom: 1em
+    }
+
+    .grid-item-7 .background {
+        height: 250px;
+    }
+
+    .iconos {
+        display: block;
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    .iconos a {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:980px) {
+
+    .grid-container h2 {
+        font-size: 1em
+    }
+
+
+}
 
 
 .bg-dots-darker {
