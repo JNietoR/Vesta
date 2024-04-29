@@ -5,28 +5,32 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <form @submit.prevent="submitForm" class="p-4">
-                    <div>
-                        <label for="nombre" class="block font-medium text-sm text-gray-700">Nombre del Documento</label>
-                        <input type="text" name="nombre" id="nombre" v-model="documento.nombre" required
-                            class="mt-1 p-2 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
-                        <InputError :message="form.errors.nombre" />
-                    </div>
+                    <form @submit.prevent="submitForm" class="p-4">
+                        <div>
+                            <label for="nombre" class="block font-medium text-sm text-gray-700">Nombre del
+                                Documento</label>
+                            <input type="text" name="nombre" id="nombre" v-model="documento.nombre"
+                                @input="updateNombre" required
+                                class="mt-1 p-2 block w-full border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                            <InputError :message="form.errors.nombre" />
+                        </div>
 
-                    <!-- Campo oculto para almacenar el contenido de Quill -->
-                    <input type="hidden" name="contenido" v-model="documento.contenido">
-                    <input type="hidden" name="user_id" v-model="documento.userId">
+                        <!-- Campo oculto para almacenar el contenido de Quill -->
+                        <input type="hidden" name="contenido" v-model="documento.contenido">
+                        <input type="hidden" name="user_id" v-model="documento.userId">
 
-                    <div class="mt-4">
-                        <label for="contenido" class="block font-medium text-sm text-gray-700">Contenido del Documento</label>
-                        <div id="editor" class="min-h-96"></div>
-                    </div>
+                        <div class="mt-4">
+                            <label for="contenido" class="block font-medium text-sm text-gray-700">Contenido del
+                                Documento</label>
+                            <div id="editor" class="min-h-96"></div>
+                        </div>
 
-                    <button type="submit"
-                        class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">Guardar Documento</button>
-                </form>
+                        <button type="submit"
+                            class="bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4">Guardar
+                            Documento</button>
+                    </form>
+                </div>
             </div>
-        </div>
         </div>
 
     </AuthenticatedLayout>
@@ -40,7 +44,7 @@ import { onMounted } from 'vue';
 import Quill from 'quill';
 
 const props = defineProps({
-    documento:{type:Object, Default:() => ({})},
+    documento: { type: Object, Default: () => ({}) },
 });
 
 // Obtener el documento pasado desde el controlador
@@ -52,6 +56,10 @@ const form = useForm({
     contenido: documento.contenido,
     userId: documento.userId
 });
+
+const updateNombre = (event) => {
+    form.nombre = event.target.value;
+};
 
 let quillEditor;
 
