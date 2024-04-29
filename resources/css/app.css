@@ -8,6 +8,11 @@
   
 
 }
+.no-padding-sm {
+    padding-left: 0 !important;
+    padding-right: 0 !important; /* Usa !important para asegurar que sobreescribe cualquier otro estilo */
+}
+
 }
 
 

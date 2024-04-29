@@ -25,9 +25,9 @@
                                         <th class="py-3 px-6 text-left" style="width: 40%">Título</th>
                                         <th class="oculta py-3 px-6 text-left" style="width: 20%">F. Creación</th>
                                         <th class="oculta py-3 px-6 text-left" style="width: 20%">F. Actualización</th>
-                                        <th class="py-3 px-6 text-center" style="width: 10%">Favorito</th>
-                                        <th class="py-3 px-6 text-center" style="width: 10%">Editar</th>
-                                        <th class="py-3 px-6 text-center" style="width: 10%">Eliminar</th>
+                                        <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Favorito</th>
+                                        <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Editar</th>
+                                        <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Eliminar</th>
                                     </tr>
                                 </thead>
                                 <!-- Cuerpo de la tabla -->
@@ -38,7 +38,7 @@
                                         <td class="py-4 px-6">{{ documento.nombre }}</td>
                                         <td class=" oculta py-4 px-6">{{ formatDate(documento.created_at) }}</td>
                                         <td class=" oculta py-4 px-6">{{ formatDate(documento.updated_at) }}</td>
-                                        <td class="py-4 px-6 text-center">
+                                        <td class="no-padding-sm py-4 px-6 text-center">
                                             <button @click="toggleFavorito(documento.id, documento.favorito)">
 
                                                 <svg v-if="documento.favorito === 1" class="w-6 h-6 text-yellow-500 hover:text-yellow-700"
@@ -58,13 +58,13 @@
 
                                             </button>
                                         </td>
-                                        <td class="py-4 px-6 flex justify-center">
+                                        <td class="no-padding-sm py-4 px-6 flex justify-center">
                                             <Link :href="`/documentos/${documento.id}/edit`"
                                                 class="text-blue-500 hover:underline hover:text-blue-700">
                                             <PencilSquareIcon class="w-5 h-5" />
                                             </Link>
                                         </td>
-                                        <td class="py-4 px-6 text-center">
+                                        <td class="no-padding-sm py-4 px-6 text-center">
                                             <form @submit.prevent="submitForm(documento.id)">
                                                 <button type="submit" class="text-red-500 hover:text-red-700">
                                                     <TrashIcon class="w-5 h-5" />
