@@ -1,7 +1,7 @@
 <script setup>
 import { Head, Link, } from "@inertiajs/vue3";
 import { ref, onMounted, onBeforeUnmount } from 'vue';//PARALLAX
-import { ArchiveBoxIcon,ClockIcon} from '@heroicons/vue/24/solid';
+import { ArchiveBoxIcon, ClockIcon } from '@heroicons/vue/24/solid';
 
 
 defineProps({
@@ -306,8 +306,8 @@ onMounted(() => {
                                     <div class="h-16 w-16 flex items-center justify-center rounded-full">
 
                                         <!--CAJA-->
-                                        <ArchiveBoxIcon class="w-16 h-16 text-iconos"/>
-                                        
+                                        <ArchiveBoxIcon class="w-16 h-16 text-iconos" />
+
 
                                     </div>
 
@@ -333,7 +333,7 @@ onMounted(() => {
                                 <div>
                                     <div
                                         class="h-16 w-16 bg-red-50 dark:bg-blue-800/20 flex items-center justify-center rounded-full">
-                                        <ClockIcon class ="w-16 h-16 text-iconos"/>
+                                        <ClockIcon class="w-16 h-16 text-iconos" />
                                     </div>
 
                                     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
@@ -404,6 +404,26 @@ onMounted(() => {
                         </div>
                     </div>
                 </section>
+                <!----GALERIA---->
+                <section>
+                    <div>
+                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
+                            ref="animatedH2">
+                            ¿Qué más ofrece Vesta?
+                        </h2>
+                    </div>
+                    <div class="grid-gallery">
+                        <a class="grid-gallery__item" href="#">
+                            <img class="grid-gallery__image" src="../../../public/assets/images/LOGO-GOOGLE.png">
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                            <img class="grid-gallery__image" src="">
+                        </a>
+                        
+                        ...
+                    </div>
+
+                </section>
 
                 <!--footer-->
                 <div class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between">
@@ -440,6 +460,67 @@ body {
     /* IE and Edge */
 
 }
+
+/****GALERIA */
+.grid-gallery {
+    display: grid;
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    grid-auto-flow: row dense;
+}
+
+@media all and (min-width: 320px) {
+    .grid-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media all and (min-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .grid-gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+.grid-gallery__item:nth-child(11n+1) {
+    grid-column: span 1;
+}
+
+.grid-gallery__item:nth-child(11n+4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.grid-gallery__item:nth-child(11n+6) {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+.grid-gallery__item:nth-child(11n+7) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grid-gallery__item:nth-child(11n+8) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-gallery__item:nth-child(11n+9) {
+    grid-row: span 3;
+}
+
+.grid-gallery__image {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
 
 
 .bg-dots-darker {
