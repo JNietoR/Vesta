@@ -85,6 +85,9 @@ const submit = () => {
                         Log in
                     </PrimaryButton>
                 </div>
+                <div>
+                    <a :href="route('register')"> <span class="txt-register"> Don't Have an account?</span> </a>
+                </div>
             </form>
 
 
@@ -92,5 +95,12 @@ const submit = () => {
     </div>
 </template>
 <style scoped>
+.txt-register {
+  font-size: 14px;
+  text-decoration: underline;
+}
+.txt-register:hover {
+  color: #0c398b;
+}
 @import '../../../css/auth.css';
 </style>
