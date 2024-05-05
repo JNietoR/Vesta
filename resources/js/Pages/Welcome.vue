@@ -286,7 +286,7 @@ onMounted(() => {
                     <div class="flex items-center justify-center my-10 animate__animated animate__fadeIn"
                         ref="animatedButton">
                         <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                            :href="route('login')">Unete</a>
+                            :href="route('login')">Únete</a>
                     </div>
                 </div>
 
@@ -410,7 +410,7 @@ onMounted(() => {
                     <div>
                         <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
                             ref="animatedH2">
-                            ¿El futuro de Vesta?
+                            El futuro de Vesta
                         </h2>
                     </div>
 
@@ -419,7 +419,7 @@ onMounted(() => {
                             <div class="flex items-center justify-end my-10 animate__animated animate__fadeIn"
                             ref="animatedButton">
                             <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                                :href="route('login')">Unete</a>
+                                :href="route('login')">Únete</a>
                     </div>
 
                         <div class="contenedor-txt">
@@ -714,8 +714,10 @@ body {
 
 .grid-item:hover {
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #ffffff91;
     outline: 1px solid #2b4a9d;
+    box-shadow: 0 0 20px rgb(68, 249, 255);
+
 
 }
 

@@ -21,7 +21,12 @@ const submit = () => {
 </script>
 
 <template>
-    <GuestLayout>
+      <section>
+        <div class='air air1'></div>
+        <div class='air air2'></div>
+        <div class='air air3'></div>
+        <div class='air air4'></div>
+    <GuestLayout class="fondo">
         <Head title="Register" />
 
         <form @submit.prevent="submit">
@@ -100,4 +105,5 @@ const submit = () => {
             </div>
         </form>
     </GuestLayout>
+      </section>
 </template>
