@@ -34,7 +34,7 @@ const submit = () => {
 
 
 
-    <section>
+    <div class="wave-container">
         <div class='air air1'></div>
         <div class='air air2'></div>
         <div class='air air3'></div>
@@ -89,6 +89,8 @@ const submit = () => {
 
 
         </GuestLayout>
-
-    </section>
+    </div>
 </template>
+<style scoped>
+@import '../../../css/auth.css';
+</style>
