@@ -38,6 +38,10 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('possit')" :active="route().current('possit')">
                                     Possit
                                 </NavLink>
+                                <NavLink :href="route('boards')" :active="route().current('boards')">
+                                    Kanban
+                                </NavLink>
+
                             </div>
                         </div>
 
