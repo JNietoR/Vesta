@@ -1,0 +1,92 @@
+
+  .fondo {
+    background: linear-gradient(182deg, #e5e9ee, #ffffff, #5272ff86);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 59s ease infinite;
+    -moz-animation: AnimationName 59s ease infinite;
+    -o-animation: AnimationName 59s ease infinite;
+    animation: AnimationName 59s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:55% 0%}
+    50%{background-position:46% 100%}
+    100%{background-position:55% 0%}
+}
+  .wave-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .wave-container .air{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(https://1.bp.blogspot.com/-xQUc-TovqDk/XdxogmMqIRI/AAAAAAAACvI/AizpnE509UMGBcTiLJ58BC6iViPYGYQfQCLcBGAsYHQ/s1600/wave.png);
+    background-size: 1000px 100px;
+    opacity: 0.3;
+    
+  }
+  .wave-container .air.air1{
+    animation: wave 30s linear infinite;
+    z-index: 1000;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+  }
+  .wave-container .air.air2{
+    animation: wave2 15s linear infinite;
+    z-index: 999;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+  }
+  .wave-container .air.air3{
+    animation: wave 30s linear infinite;
+    z-index: 998;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+  }
+  .wave-container .air.air4{
+    animation: wave2 5s linear infinite;
+    z-index: 997;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+  }
+  @keyframes wave{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: 1000px; 
+    }
+  }
+  @keyframes wave2{
+    0%{
+      background-position-x: 0px; 
+    }
+    100%{
+      background-position-x: -1000px; 
+    }
+  }
