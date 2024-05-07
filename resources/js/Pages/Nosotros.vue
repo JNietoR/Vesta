@@ -61,7 +61,7 @@ defineProps({
                 <div class="flex-container">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         <div class="text-container">
-                            <h2>Diosa del Hogar y la Organización</h2>
+                            <h2 id="h2nosotros">Diosa del Hogar y la Organización</h2>
                             <blockquote>
                                 <i
                                     >''La herramienta definitiva para la gestión
