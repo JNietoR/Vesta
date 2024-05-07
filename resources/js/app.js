@@ -1,8 +1,8 @@
 import './bootstrap';
 import '../css/app.css';
 import '../css/welcome.css';
+import '../css/auth.css';
 import '../css/nosotros.css';
-
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Documento extends Model
 {
     protected $table = 'documento';
-    protected $fillable = ['id', 'nombre', 'contenido'];
+    protected $fillable = ['id', 'nombre', 'contenido','favorito'];
 
     public function user()
     {

@@ -22,7 +22,7 @@ const showingNavigationDropdown = ref(false);
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
                                     <ApplicationLogo
-                                        class="block h-9 w-auto fill-current text-gray-800"
+                                        class="block h-28 w-auto fill-current text-gray-800"
                                     />
                                 </Link>
                             </div>
@@ -38,9 +38,10 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('possit')" :active="route().current('possit')">
                                     Possit
                                 </NavLink>
-                                <NavLink :href="route('kanban')" :active="route().current('kanban')">
+                                <NavLink :href="route('boards')" :active="route().current('boards')">
                                     Kanban
                                 </NavLink>
+
                             </div>
                         </div>
 
