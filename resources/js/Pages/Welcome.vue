@@ -264,8 +264,8 @@ onMounted(() => {
                 <!--DESCRIPCION DEL PROYECTO-->
                 <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
                     <h2 class="text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h2>
-                    <blockquote>
-                        <p class="font-extralight text-2xl description-txt mt-8">
+                    <blockquote class="block-768">
+                        <p class=" ttl-768 font-extralight text-2xl description-txt mt-8">
                             <q>
                                 <i>
                                     “La sabiduría no es solo conocimiento, sino la capacidad de aplicar ese conocimiento
@@ -293,7 +293,7 @@ onMounted(() => {
                 <section class="my-75 parallax2" :style="{ opacity: opacityValue }">
 
                     <div>
-                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
+                        <h2 class=" h2-768 text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
                             ref="animatedH2">
                             ¿Qué ofrece Vesta?</h2>
                     </div>
@@ -408,7 +408,7 @@ onMounted(() => {
                 <section>
 
                     <div>
-                        <h2 class="text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
+                        <h2 class="h2-768 text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
                             ref="animatedH2">
                             El futuro de Vesta
                         </h2>
@@ -416,14 +416,14 @@ onMounted(() => {
 
 
                     <div class="contenedor-derecha">
-                            <div class="flex items-center justify-end my-10 animate__animated animate__fadeIn"
+                            <div class="btn-768 flex items-center justify-end my-10 0 animate__animated animate__fadeIn"
                             ref="animatedButton">
                             <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
                                 :href="route('login')">Únete</a>
                     </div>
 
                         <div class="contenedor-txt">
-                            <blockquote class="flex items-center justify-end my-10 animate__animated animate__fadeIn w-40 text-white">
+                            <blockquote class="block-768 flex items-center justify-end my-10 animate__animated animate__fadeIn w-40 text-white">
                                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum libero itaque aliquam
                                     repudiandae
                                     eligendi vero, qui accusantium quibusdam consequatur, ipsa ad tenetur cupiditate

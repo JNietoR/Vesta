@@ -173,6 +173,10 @@ body {
 /************MEDIAS*****************/
 /**MOVIL**/
 @media (max-width:768px) {
+  .iconos {
+    display: block !important;
+  
+  }
   .grid-container {
     display: block;
     width: 93%;
@@ -225,9 +229,46 @@ body {
   }
   /**ARREGLAR*/
   .contenedor-derecha {
-    position: relative;
-    top: 100px;
+    width: 100% ;
+    max-width: 100%;
+    top: 0px !important;
+
   }
+  .btn-768{
+    width: 70%;
+    max-width: 100%;
+    padding: 1em 1em 0em 0em;
+    margin: 1em;
+    margin-bottom: 0;
+  }
+  .contenedor-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+ .block-768{
+  width: 100%;
+
+ }
+  .h2-768{
+    padding-top: 1em !important;
+    margin: 0em !important;
+    text-align: center;
+  }
+  .container-text{
+    width: 100% !important;
+  }
+  .parallax p{
+    width: 100% !important;
+  }
+  .ttl-768{
+    padding: 0 !important;
+    padding-bottom: 2em !important;
+    text-align: center;
+  }
+
 }
 
 /**tablet*/
