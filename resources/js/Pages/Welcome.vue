@@ -263,7 +263,7 @@ onMounted(() => {
 
                 <!--DESCRIPCION DEL PROYECTO-->
                 <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
-                    <h2 class="text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h2>
+                    <h1 class=" h2-768 text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
                     <blockquote class="block-768">
                         <p class=" ttl-768 font-extralight text-2xl description-txt mt-8">
                             <q>

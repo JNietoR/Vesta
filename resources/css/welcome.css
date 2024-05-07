@@ -177,6 +177,10 @@ body {
     display: block !important;
   
   }
+  .parallax h1 {
+    padding: 1rem;
+    font-size: 5em;
+  }
   .grid-container {
     display: block;
     width: 93%;
@@ -463,8 +467,6 @@ body {
 
 .parallax h1 {
   padding: 1rem;
-  font-style: italic;
-  text-shadow: 2px 23px 4px #000000;
 }
 
 hr {
