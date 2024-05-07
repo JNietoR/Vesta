@@ -108,7 +108,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                            id="imgnosotros"
+                                                id="imgnosotros"
                                                 src="/storage/caras/irene.jpg"
                                                 alt="card image"
                                                 class="info__img img"
@@ -170,7 +170,7 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                        id="imgnosotros"
+                                            id="imgnosotros"
                                             src="/storage/caras/irene.jpg"
                                             alt="card image"
                                             class="card_img"
@@ -192,7 +192,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                            id="imgnosotros"
+                                                id="imgnosotros"
                                                 src="/storage/caras/irene.jpg"
                                                 alt="card image"
                                                 class="info__img img"
@@ -254,7 +254,7 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                        id="imgnosotros"
+                                            id="imgnosotros"
                                             src="/storage/caras/irene.jpg"
                                             alt="card image"
                                             class="card_img"
@@ -276,7 +276,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                            id="imgnosotros"
+                                                id="imgnosotros"
                                                 src="/storage/caras/irene.jpg"
                                                 alt="card image"
                                                 class="info__img img"
@@ -338,7 +338,7 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                        id="imgnosotros"
+                                            id="imgnosotros"
                                             src="/storage/caras/irene.jpg"
                                             alt="card image"
                                             class="card_img"
@@ -360,7 +360,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                            id="imgnosotros"
+                                                id="imgnosotros"
                                                 src="/storage/caras/irene.jpg"
                                                 alt="card image"
                                                 class="info__img img"
@@ -422,7 +422,7 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                        id="imgnosotros"
+                                            id="imgnosotros"
                                             src="/storage/caras/irene.jpg"
                                             alt="card image"
                                             class="card_img"
@@ -444,7 +444,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                            id="imgnosotros"
+                                                id="imgnosotros"
                                                 src="/storage/caras/irene.jpg"
                                                 alt="card image"
                                                 class="info__img img"
