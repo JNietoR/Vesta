@@ -20,7 +20,7 @@ const showingNavigationDropdown = ref(false);
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
-                                <Link :href="route('welcome')">
+                                <Link :href="route('dashboard')">
                                     <ApplicationLogo
                                         class="block h-28 w-auto fill-current text-gray-800"
                                     />

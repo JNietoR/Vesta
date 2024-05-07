@@ -30,15 +30,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/welcome', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
-
 Route::get('/Nosotros', function () {
     return Inertia::render('Nosotros', [
         'canLogin' => Route::has('login'),
