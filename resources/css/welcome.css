@@ -173,6 +173,7 @@ body {
 /************MEDIAS*****************/
 /**MOVIL**/
 @media (max-width:768px) {
+
   .iconos {
     display: block !important;
   
@@ -272,6 +273,10 @@ body {
     padding-bottom: 2em !important;
     text-align: center;
   }
+
+
+  
+  
 
 }
 
@@ -385,13 +390,20 @@ body {
 
 /* This only changes this particular animation duration */
 .animate__animated.animate__fadeIn {
-  --animate-duration: 7s;
+  --animate-duration: 4s;
+}
+
+.animate__animated.animate__backInLeft {
+  --animate-duration: 4s;
+}
+.animate__animated.animate__backInRight {
+  --animate-duration: 4s;
 }
 
 /* This changes all the animations globally */
 :root {
   --animate-duration: 1000ms;
-  --animate-delay: 1.9s;
+  --animate-delay: 4.9s;
 }
 
 

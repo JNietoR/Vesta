@@ -61,7 +61,7 @@ onMounted(() => {
 });
 
 
-/**************************H2 ANIMADO*************************/
+/**************************H2 ANIMADO*************************
 const animatedH2 = ref(null);
 
 onMounted(() => {
@@ -82,7 +82,7 @@ onMounted(() => {
     );
 
     observer.observe(animatedH2.value);
-});
+});*/
 
 
 </script>
@@ -405,10 +405,10 @@ onMounted(() => {
                     </div>
                 </section>
                 <!----GALERIA---->
-                <section>
+                <section class="parallax2" :style="{ opacity: opacityValue }">
 
                     <div>
-                        <h2 class="h2-768 text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
+                        <h2 class="h2-768 text-7xl text-white m-20 mb-0 pb-0 p-50 titulo animate__animated animate__backInLeft"
                             ref="animatedH2">
                             El futuro de Vesta
                         </h2>
@@ -437,7 +437,7 @@ onMounted(() => {
                     
                         
 
-                    <div class="grid-container">
+                    <div class="grid-container ">
                         <div class="grid-item grid-item-1">
                             <!---ICONO-->
                             <a class="" href="#">
