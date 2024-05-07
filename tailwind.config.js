@@ -18,6 +18,7 @@ export default {
             },
             colors: {
                 'azulvesta': '#2b4a9d',
+           'iconos': '#b3e7ff',
             },
         },
         screens: {
