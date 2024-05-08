@@ -608,6 +608,9 @@ onMounted(() => {
                         </div>
                     </div>
 
+
+
+
                     <div class="grid-container">
                         <div class="grid-item grid-item-1">
                             <!---ICONO-->
@@ -773,9 +776,13 @@ onMounted(() => {
                 </section>
                 <a href="/dona" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Dona</a>
                 <!--footer-->
-                <div
-                    class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between"
-                ></div>
+                <div class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between">
+                    <div class="text-center text-sm sm:text-start">&nbsp;</div>
+
+                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-end sm:ms-0">
+                        Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
+                    </div>
+                </div>
             </div>
         </div>
     </div>
