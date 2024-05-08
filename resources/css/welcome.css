@@ -29,6 +29,7 @@ body {
     "box6  box6  box7  box7  box8  box9"
     "box10 box11 box7  box7  box8  box9"
     "box12 box12 box13 box13 box14 box14";
+    margin: auto;
 }
 
 .grid-container p {
@@ -56,10 +57,8 @@ body {
 }
 
 .contenedor-txt {
-  display: flex;
-  justify-content: end;
-  float: right;
-  width: 24%;
+  width:100%;
+  max-width:100%;
 }
 
 .contenedor-txt p {
@@ -69,8 +68,14 @@ body {
 
 /******HACER RESPONSIVE EN MOVIL***** */
 .contenedor-derecha {
-  position: relative;
-  top: 100px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.btn-unete{
+  margin:0;
+  margin-bottom:20px;
 }
 
 .grid-item-1 {
@@ -166,7 +171,7 @@ body {
 }
 
 .grid-item img {
-  width: 30%;
+  width: 50%;
   margin: auto;
 }
 
@@ -176,6 +181,23 @@ body {
   .grid-container {
     display: block;
     width: 93%;
+  }
+
+  .btn-768{
+    width: 44%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .contenedor-derecha {
+    width: 100% ;
+    max-width: 100%;
+    top: 0px !important;
+
+  }
+
+  .block-768{
+    width: 100% ;
+    margin-bottom:10px;
   }
 
   .grid-item img {
@@ -355,7 +377,7 @@ body {
 .parallax {
 
   /**********FONDO POR SI SE PONE, PREGUNTAR************ */
-  /*background-image: url(""); 
+  /*background-image: url("");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
