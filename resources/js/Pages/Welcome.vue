@@ -2,6 +2,7 @@
 import { Head, Link, } from "@inertiajs/vue3";
 import { ref, onMounted, onBeforeUnmount } from 'vue';//PARALLAX
 import { ArchiveBoxIcon, ClockIcon } from '@heroicons/vue/24/solid';
+import footerTw from '@/Components/footer.vue';
 
 
 defineProps({
@@ -94,7 +95,7 @@ onMounted(() => {
 
 
     <!--contenedor global-->
-    <div>
+    <div class="black-gradiant">
 
         <div class="container">
             <div id='stars'></div>
@@ -134,7 +135,7 @@ onMounted(() => {
 
 
 
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
+            <div class=" black-gradiant max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center ">
                     <svg class="animate__animated animate__fadeIn max-w-2xl flex justify-center mx-auto  p-6 lg:p-8 "
                         version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -412,30 +413,35 @@ onMounted(() => {
                             ref="animatedH2">
                             El futuro de Vesta
                         </h2>
-                    </div>
+                        <blockquote
+                            class=" contenedor-txt block-768 flex items-center justify-center text-center my-10 animate__animated animate__fadeIn w-40 text-white">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum libero itaque aliquam
+                                repudiandae
+                                eligendi vero, qui accusantium quibusdam consequatur, ipsa ad tenetur cupiditate
+                                molestias! Eius ut
+                                nulla vel dolores quaerat!
 
+                            </p>
+                        </blockquote>
 
-                    <div class="contenedor-derecha">
-                            <div class="btn-768 flex items-center justify-end my-10 0 animate__animated animate__fadeIn"
-                            ref="animatedButton">
-                            <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                                :href="route('login')">Únete</a>
-                    </div>
+                        <div class="contenedor-derecha">
+                            <div class="btn-unete btn-768 flex items-center justify-end my-10 0 animateanimated animatefadeIn"
+                                ref="animatedButton">
+                                <a href="/dona"
+                                    class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Dona</a>
+                            </div>
 
-                        <div class="contenedor-txt">
-                            <blockquote class="block-768 flex items-center justify-end my-10 animate__animated animate__fadeIn w-40 text-white">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum libero itaque aliquam
-                                    repudiandae
-                                    eligendi vero, qui accusantium quibusdam consequatur, ipsa ad tenetur cupiditate
-                                    molestias! Eius ut
-                                    nulla vel dolores quaerat!
-                                </p>
-                            </blockquote>
                         </div>
+
+
+
+
                     </div>
-                    
-                    
-                        
+
+
+
+
+
 
                     <div class="grid-container ">
                         <div class="grid-item grid-item-1">
@@ -573,23 +579,16 @@ onMounted(() => {
                     </div>
 
                 </section>
-
-                <!--footer-->
-                <div class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm sm:text-start">&nbsp;</div>
-
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-end sm:ms-0">
-                        Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
-                    </div>
-                </div>
             </div>
 
         </div>
 
     </div>
 
+    <footerTw />
 </template>
 
 <style>
 @import '../../css/welcome.css';
+@import '../../css/footer.css';
 </style>

@@ -1,0 +1,16 @@
+.black-gradiant{
+    border-image: fill 0 linear-gradient(to bottom, rgba(0, 0, 0, 0.247), rgba(0, 0, 0, 0.5));
+    transition: opacity 1s ease-in-out;
+}
+.black-gradiant::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Ajusta esto para cambiar la altura del difuminado */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.473), transparent);
+    z-index: 2;
+}
+
+
