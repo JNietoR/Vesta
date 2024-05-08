@@ -1,5 +1,4 @@
 <script setup>
-
 import { Head, Link } from "@inertiajs/vue3";
 import { ref, onMounted, onBeforeUnmount } from "vue"; //PARALLAX
 import { ArchiveBoxIcon, ClockIcon } from "@heroicons/vue/24/solid";
@@ -9,9 +8,9 @@ import { useForm } from "@inertiajs/vue3";
 const form = useForm({});
 
 const submitForm = () => {
-    form.post('/dona', {
+    form.post("/dona", {
         onSuccess: () => {
-            console.log('Form submitted successfully');
+            console.log("Form submitted successfully");
         },
     });
 };
@@ -22,14 +21,6 @@ defineProps({
     },
     canRegister: {
         type: Boolean,
-    },
-    laravelVersion: {
-        type: String,
-        required: true,
-    },
-    phpVersion: {
-        type: String,
-        required: true,
     },
 });
 
@@ -387,7 +378,7 @@ onMounted(() => {
                 >
                     <div>
                         <h2
-                            class="text-7xl text-white m-20 p-50 titulo animate__animated animate__backInRight"
+                            class="h2-768 text-7xl text-white m-20 p-50 titulo animateanimated animatebackInRight"
                             ref="animatedH2"
                         >
                             ¿Qué ofrece Vesta?
@@ -570,219 +561,198 @@ onMounted(() => {
                     </div>
                 </section>
                 <!----GALERIA---->
-                <section>
+                <section class="parallax2" :style="{ opacity: opacityValue }">
                     <div>
-                        <h2
-                            class="text-7xl text-white m-20 p-50 titulo animate__animated animate__backInRight"
-                            ref="animatedH2"
-                        >
+                        <h2 class="h2-768 text-7xl text-white m-20 mb-0 pb-0 p-50 titulo animateanimated animatebackInLeft"
+                            ref="animatedH2">
                             El futuro de Vesta
                         </h2>
-                    </div>
+                        <blockquote
+                            class=" contenedor-txt block-768 flex items-center justify-center text-center my-10 animateanimated animatefadeIn w-40 text-white">
+                            <p> ¡Vesta evoluciona! Tenemos planes para añadir
+                                diferentes funciones como alertas, chat en vivo
+                                así como integraciones a diferentes plataformas
+                                como puede ser Discord, Notion y más para
+                                mejorar tu experiencia. Estamos emocionados por
+                                estas nuevas funcionalidades. ¡Mantente atento!
 
-                    <div class="contenedor-derecha">
-                        <div
-                            class="flex items-center justify-end my-10 animate__animated animate__fadeIn"
-                            ref="animatedButton"
-                        >
-                            <a
-                                class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover"
-                                :href="route('login')"
-                                >Únete</a
-                            >
+                            </p>
+                        </blockquote>
+
+                        <div class="contenedor-derecha">
+                            <div class="btn-unete btn-768 flex items-center justify-end my-10 0 animateanimated animatefadeIn"
+                                ref="animatedButton">
+                                <a href="/dona"
+                                    class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Dona</a>
+                            </div>
+
                         </div>
 
-                        <div class="contenedor-txt">
-                            <blockquote
-                                class="flex items-center justify-end my-10 animate__animated animate__fadeIn w-40 text-white"
-                            >
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Eum libero itaque aliquam
-                                    repudiandae eligendi vero, qui accusantium
-                                    quibusdam consequatur, ipsa ad tenetur
-                                    cupiditate molestias! Eius ut nulla vel
-                                    dolores quaerat!
-                                </p>
-                            </blockquote>
-                        </div>
+
+
+
                     </div>
-
-
-
 
                     <div class="grid-container">
-                        <div class="grid-item grid-item-1">
+                        <div
+                            class="grid-item grid-item-1 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Notifications_alert_badge_-_1_alert.svg/1024px-Notifications_alert_badge_-_1_alert.svg.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-2">
+                        <div
+                            class="grid-item grid-item-2 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://www.svgrepo.com/show/353655/discord-icon.svg"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-3">
+                        <div
+                            class="grid-item grid-item-3 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/notion-icon.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-4">
+                        <div
+                            class="grid-item grid-item-4 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://store-images.s-microsoft.com/image/apps.47763.13959754522315136.87be3224-9693-4fd4-8cd4-af6362fb8d37.b3c24453-164b-4d03-b561-e77aec7c076a"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-5">
+                        <div
+                            class="grid-item grid-item-5 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://images.ctfassets.net/9haz2glq4wt0/4ezP92SinACA9I2x9EwDv6/678adbc1f4f35654e88b2865ced18049/Capacities_Logo_-_PNG.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-6">
+                        <div
+                            class="grid-item grid-item-6 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/2048px-Google_Calendar_icon_%282020%29.svg.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-7">
+                        <div
+                            class="grid-item grid-item-7 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://cdn-icons-png.flaticon.com/512/2936/2936956.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-8">
+                        <div
+                            class="grid-item grid-item-8 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-9">
+                        <div
+                            class="grid-item grid-item-9 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://wiki.hornbill.com/images/4/46/Azure_ai_logo.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
-                            </a>
-                        </div>
-
-                        <div class="grid-item grid-item-10">
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
-                                />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
 
-                        <div class="grid-item grid-item-11">
+                        <div
+                            class="grid-item grid-item-10 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://cdn-icons-png.flaticon.com/512/4730/4730517.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
 
-                        <div class="grid-item grid-item-12">
+                        <div
+                            class="grid-item grid-item-11 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://luna1.co/dc739c.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-13">
+
+                        <div
+                            class="grid-item grid-item-12 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
                             </a>
                         </div>
-                        <div class="grid-item grid-item-14">
+                        <div
+                            class="grid-item grid-item-13 flex items-center justify-center"
+                        >
                             <!---ICONO-->
                             <a class="" href="#">
                                 <img
                                     class="grid-gallery__image"
-                                    src="https://kstatic.googleusercontent.com/files/d57b24106c34c7e50ef3d98423b94ddaf35ad2da73a9b9d4d12f52dbb9dd4c08c2957f6255ab8690d5ef0b32cff8287e09577d05e479d263e872160c4c9e8363"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png"
                                 />
-                                <h2>Titulo</h2>
-                                <p>descripción</p>
+                            </a>
+                        </div>
+                        <div
+                            class="grid-item grid-item-14 flex items-center justify-center"
+                        >
+                            <!---ICONO-->
+                            <a class="" href="#">
+                                <img
+                                    class="grid-gallery__image"
+                                    src="https://play-lh.googleusercontent.com/0j8Ksxq3X5pX65gLoUIyyL3pKW877nfwiDA4__gfBb7O_tUxLUqoXwENsaN-onlMQ8s"
+                                />
                             </a>
                         </div>
                     </div>
-
-
-
                 </section>
-                <a href="/dona" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Dona</a>
-                <!--footer-->
-                <div class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm sm:text-start">&nbsp;</div>
-
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-end sm:ms-0">
-                        Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})
-                    </div>
-                </div>
             </div>
         </div>
     </div>
