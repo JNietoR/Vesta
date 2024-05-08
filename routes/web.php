@@ -108,7 +108,7 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 
 // stripe
 
-Route::get('/', 'App\Http\Controllers\StripeController@index')->name('index');
+Route::get('/dona', 'App\Http\Controllers\StripeController@index')->name('dona');
 Route::post('/checkout', 'App\Http\Controllers\StripeController@checkout')->name('checkout');
 Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
 

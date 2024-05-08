@@ -9,8 +9,8 @@ class StripeController extends Controller
 {
     public function index()
     {
-        // return view('index');
-         return Inertia::render('Welcome');
+         return view('dona');
+        // return Inertia::render('Welcome');
     }
     public function checkout()
     {
@@ -19,7 +19,7 @@ class StripeController extends Controller
         $session = \Stripe\Checkout\Session::create([
             'line_items' => [[
                 'price_data' => [
-                    'currency' => 'usd',
+                    'currency' => 'eur',
                     'product_data' => [
                         'name' => 'Doname',
                     ],

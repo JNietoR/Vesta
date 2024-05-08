@@ -9,7 +9,7 @@ import { useForm } from "@inertiajs/vue3";
 const form = useForm({});
 
 const submitForm = () => {
-    form.post('/checkout', {
+    form.post('/dona', {
         onSuccess: () => {
             console.log('Form submitted successfully');
         },
@@ -768,22 +768,10 @@ onMounted(() => {
                         </div>
                     </div>
 
-                    <form @submit.prevent="submitForm">
-                        <input type="hidden" v-model="form._toker" />
-                        <button type="submit">Submit</button>
-                    </form>
 
-                    <form action="/checkout" method="post">
-                        <input
-                            type="hidden"
-                            name="_token"
-                            value="{{csrf_token()}}"
-                        />
-                        <button type="submit">Doname porfavor</button>
-                    </form>
 
                 </section>
-
+                <a href="/dona" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Dona</a>
                 <!--footer-->
                 <div
                     class="flex justify-center mt-16 px-6 sm:items-center sm:justify-between"
