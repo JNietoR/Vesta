@@ -61,20 +61,22 @@ defineProps({
                 <div class="flex-container">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         <div class="text-container">
-                            <h2>Diosa del Hogar y la Organización</h2>
-                            <blockquote>
+                            <h2 id="textoh2">
+                                Diosa del Hogar y la Organización
+                            </h2>
+                            <blockquote id="blockquoteNosotros">
                                 <i
                                     >''La herramienta definitiva para la gestión
                                     de tu vida laboral y personal''</i
                                 >
                             </blockquote>
                         </div>
-                        <div class="imagen-container">
-                            <img src="/storage/logo/LogoBlanco.svg" />
+                        <div id="imagen-container">
+                            <img src="/storage/logo/LogoBlanco.svg" id="img" />
                         </div>
                         <div class="texto-creadores">
-                            <h5>Creadores</h5>
-                            <h3>¿Quienés somos?</h3>
+                            <h5 id="textoh5">Creadores</h5>
+                            <h3 id="textoh3">¿Quienés somos?</h3>
                         </div>
                         <div class="tarjetas-contenedor">
                             <div class="card">
@@ -124,6 +126,7 @@ defineProps({
                                             href="https://www.linkedin.com/in/ireneoliver/"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i
@@ -136,6 +139,7 @@ defineProps({
                                             href="https://github.com/IOliverC"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-github-line"></i>
@@ -146,6 +150,7 @@ defineProps({
                                             href="mailto:irene.oliver.correa4@gmail.com"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-mail-line"></i>
@@ -201,6 +206,7 @@ defineProps({
                                             href="https://www.linkedin.com/in/jorgenietor"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i
@@ -213,6 +219,7 @@ defineProps({
                                             href="https://github.com/JNietoR"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-github-line"></i>
@@ -223,6 +230,7 @@ defineProps({
                                             href="mailto:jorge.nieto35@gmail.com "
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-mail-line"></i>
@@ -280,6 +288,7 @@ defineProps({
                                             href="https://www.linkedin.com/in/manugm07"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i
@@ -292,6 +301,7 @@ defineProps({
                                             href="https://github.com/lojnoe"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-github-line"></i>
@@ -302,6 +312,7 @@ defineProps({
                                             href="mailto:manu872003@gmail.com "
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-mail-line"></i>
@@ -357,6 +368,7 @@ defineProps({
                                             href="https://www.linkedin.com/in/alvaros1998/"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i
@@ -369,6 +381,7 @@ defineProps({
                                             href="https://github.com/AlvarOSierra1998"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-github-line"></i>
@@ -379,6 +392,7 @@ defineProps({
                                             href="mailto:alvaro-olmos12@hotmail.com"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-mail-line"></i>
@@ -436,6 +450,7 @@ defineProps({
                                             href="https://www.linkedin.com/in/alvaros1998/"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i
@@ -448,6 +463,7 @@ defineProps({
                                             href="https://github.com/AlvarOSierra1998"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-github-line"></i>
@@ -458,6 +474,7 @@ defineProps({
                                             href="mailto:alvaro-olmos12@hotmail.com"
                                             target="_blank"
                                             class="info__social-link"
+                                            id="a"
                                         >
                                             <span class="info__social-icon">
                                                 <i class="ri-mail-line"></i>
