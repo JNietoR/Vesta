@@ -106,5 +106,10 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::delete('/cardlist/{list}', [CardListController::class, 'destroy'])->name('cardLists.destroy');
 });
 
+// stripe
+
+Route::get('/', 'App\Http\Controllers\StripeController@index')->name('index');
+Route::post('/checkout', 'App\Http\Controllers\StripeController@checkout')->name('checkout');
+Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
 
 require __DIR__ . '/auth.php';
