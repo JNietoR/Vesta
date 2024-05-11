@@ -194,6 +194,11 @@ body {
     display: block !important;
   
   }
+
+  .iconos-768{
+    display: block !important;
+    width: 100%;
+  }
   .parallax h1 {
     padding: 1rem;
     font-size: 5em;
@@ -217,14 +222,10 @@ body {
     height: 250px;
   }
 
-  .iconos {
-    display: block;
-    width: 100%;
-    padding: 0.5em;
-  }
 
   .iconos a {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+    width: 100% !important;
   }
 
   .titulo {
@@ -303,7 +304,23 @@ body {
     font-size: 1em
   }
 
-
+  .iconos {
+    display: block !important;
+    
+   
+  }
+.iconos a{
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.parallax2 h2{
+  text-align: center;
+}
+.contenedor-derecha{
+  margin-bottom: 50px;
+}
 }
 
 
@@ -520,8 +537,10 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  
 
 }
+
 
 .colorIcons {
   color: #b3e7ff;
