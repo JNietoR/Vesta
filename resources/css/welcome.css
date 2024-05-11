@@ -17,6 +17,14 @@ body {
 
 }
 
+.btn-dona-une{
+  transition: all .3s ease;
+}
+.btn-dona-une:hover{
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
 .grid-container {
   display: grid;
   place-content: center;
@@ -37,7 +45,7 @@ body {
 }
 
 .grid-item {
-  background-color: #1b2735;
+  background-color: #1d2c3d;
   padding: .5rem 1rem;
   text-align: center;
   display: flex;
@@ -49,9 +57,10 @@ body {
 
 .grid-item:hover {
   cursor: pointer;
-  background-color: #ffffff91;
-  outline: 1px solid #2b4a9d;
-  box-shadow: 0 0 20px rgb(68, 249, 255);
+  background: linear-gradient(to top, #0000005e 10%, #ffffffb6 70%);
+  outline: 1px solid #ffffff;
+  box-shadow: 0 0 40px rgb(255, 255, 255);
+  color: #000000;
 
 
 }
@@ -168,7 +177,9 @@ body {
   -webkit-text-fill-color: transparent;
   margin: auto;
   font-size: 2.5rem;
+  transition:  all 4s ease;
 }
+
 
 .grid-item img {
   width: 30%;

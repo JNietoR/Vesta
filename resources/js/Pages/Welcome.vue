@@ -116,7 +116,7 @@ onMounted(() => {
         </div>
 
         <div
-            class=" relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center   selection:bg-red-500 selection:text-white">
+            class="black-gradiant relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center   selection:bg-red-500 selection:text-white">
             <div v-if="canLogin" class="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                 <Link v-if="$page.props.auth.user" :href="route('dashboard')"
                     class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
@@ -135,7 +135,7 @@ onMounted(() => {
 
 
 
-            <div class=" black-gradiant max-w-7xl mx-auto p-6 lg:p-8">
+            <div class=" max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center ">
                     <svg class="animate__animated animate__fadeIn max-w-2xl flex justify-center mx-auto  p-6 lg:p-8 "
                         version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -284,10 +284,12 @@ onMounted(() => {
 
 
                 <div class="parallax" :style="{ opacity: opacityValue }">
-                    <div class="flex items-center justify-center my-10 animate__animated animate__fadeIn"
+                    <div class=" flex items-center justify-center my-10 animate__animated animate__fadeIn"
                         ref="animatedButton">
-                        <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                            :href="route('login')">Únete</a>
+                        <div class="btn-dona-une">
+                            <a class=" dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
+                                :href="route('login')">Únete</a>
+                        </div>
                     </div>
                 </div>
 
@@ -425,7 +427,7 @@ onMounted(() => {
                         </blockquote>
 
                         <div class="contenedor-derecha">
-                            <div class="btn-unete btn-768 flex items-center justify-end my-10 0 animateanimated animatefadeIn"
+                            <div class="btn-unete btn-dona-une btn-768 flex items-center justify-end my-10 0 animateanimated animatefadeIn"
                                 ref="animatedButton">
                                 <a href="/dona"
                                     class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Dona</a>
