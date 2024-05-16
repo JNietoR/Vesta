@@ -76,7 +76,7 @@ defineProps({
                         </div>
                         <div class="texto-creadores">
                             <h5 id="textoh5">Creadores</h5>
-                            <h3 id="textoh3">¿Quienés somos?</h3>
+                            <h3 id="textoh3">¿Quiénes somos?</h3>
                         </div>
                         <div class="tarjetas-contenedor">
                             <div class="card">
@@ -163,7 +163,7 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            src="/storage/caras/irene.jpg"
+                                            src="/storage/caras/jorge.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
@@ -182,7 +182,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                src="/storage/caras/irene.jpg"
+                                                src="/storage/caras/jorge.jpg"
                                                 alt="card image"
                                                 class="info__img img"
                                             />
@@ -243,7 +243,7 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            src="/storage/caras/irene.jpg"
+                                            src="/storage/caras/manuel.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
@@ -264,7 +264,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                src="/storage/caras/irene.jpg"
+                                                src="/storage/caras/manuel.jpg"
                                                 alt="card image"
                                                 class="info__img img"
                                             />
@@ -325,7 +325,7 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            src="/storage/caras/irene.jpg"
+                                            src="/storage/caras/alvaro.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
@@ -344,7 +344,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                src="/storage/caras/irene.jpg"
+                                                src="/storage/caras/alvaro.jpg"
                                                 alt="card image"
                                                 class="info__img img"
                                             />
