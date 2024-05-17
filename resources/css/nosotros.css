@@ -307,7 +307,7 @@
         display: block;
         margin: auto;
         text-align: center;
-        padding: auto;
+        padding: 0;
         transform: scale(0.8);
         margin-top: -15vw;
         margin-bottom: 10vw;
@@ -318,13 +318,13 @@
     }
 
     .text-container {
-        scale: 100%;
+        transform: scale(1);
         margin: auto;
         text-align: center;
     }
 
     .texto-creadores {
-        scale: 400%;
+        transform: scale(1);
         padding-bottom: 5vw;
         margin: auto;
         text-align: center;
@@ -347,6 +347,7 @@
 
 @media (max-width: 960px) {
     .grid {
+        position: relative;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -370,15 +371,13 @@
         display: block;
         margin: auto;
         text-align: center;
-        padding-left: 7vw;
     }
 
     #imagen-container img {
         margin: auto;
     }
-
     .text-container {
-        transform: scale();
+        transform: scale(1);
         margin: auto;
         text-align: center;
     }
@@ -386,6 +385,7 @@
     .texto-creadores {
         scale: 400%;
         padding-bottom: 5vw;
+        padding-top: 5vw;
         margin: auto;
         text-align: center;
     }
