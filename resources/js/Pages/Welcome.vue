@@ -120,20 +120,13 @@ onMounted(() => {
                 Dashboard</Link>
 
                 <template v-else>
-                    <Link
-                        :href="route('login')"
-                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >
-                        Log in</Link
-                    >
+                    <Link :href="route('login')"
+                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                    Log in</Link>
 
-                    <Link
-                        v-if="canRegister"
-                        :href="route('register')"
-                        class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >
-                        Register</Link
-                    >
+                    <Link v-if="canRegister" :href="route('register')"
+                        class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                    Register</Link>
                 </template>
             </div>
 
@@ -315,7 +308,7 @@ onMounted(() => {
 
                 <!--DESCRIPCION DEL PROYECTO-->
                 <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
-                    <h1 class="  h2-768 text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h2>
+                    <h1 class="  h2-768 text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
                     <blockquote class="block-768" >
                         <p class="ttl-768 font-extralight text-2xl description-txt mt-8">
                             <q>
@@ -504,30 +497,31 @@ onMounted(() => {
                             ref="animatedH2">
                             El futuro de Vesta
                         </h2>
-                    </div>
+                        <blockquote
+                            class=" contenedor-txt block-768 flex items-center justify-center text-center my-10 animateanimated animatefadeIn w-40 text-white">
+                            <p> ¡Vesta evoluciona! Tenemos planes para añadir
+                                diferentes funciones como alertas, chat en vivo
+                                así como integraciones a diferentes plataformas
+                                como puede ser Discord, Notion y más para
+                                mejorar tu experiencia. Estamos emocionados por
+                                estas nuevas funcionalidades. ¡Mantente atento!
 
+                            </p>
+                        </blockquote>
 
-                    <div class="contenedor-derecha">
-                            <div class="flex items-center justify-end my-10 animate__animated animate__fadeIn"
-                            ref="animatedButton">
-                            <a class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                                :href="route('login')">Únete</a>
-                    </div>
+                        <div class="contenedor-derecha">
+                            <div class="btn-unete btn-768 flex items-center justify-end my-10 0 animateanimated animatefadeIn"
+                                ref="animatedButton">
+                                <a href="/dona"
+                                    class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Dona</a>
+                            </div>
 
-                        <div class="contenedor-txt">
-                            <blockquote class="flex items-center justify-end my-10 animate__animated animate__fadeIn w-40 text-white">
-                                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum libero itaque aliquam
-                                    repudiandae
-                                    eligendi vero, qui accusantium quibusdam consequatur, ipsa ad tenetur cupiditate
-                                    molestias! Eius ut
-                                    nulla vel dolores quaerat!
-                                </p>
-                            </blockquote>
                         </div>
+
+
+
+
                     </div>
-
-
-
 
                     <div class="grid-container">
                         <div
