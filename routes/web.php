@@ -25,8 +25,6 @@ Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
 });
 
@@ -34,8 +32,6 @@ Route::get('/Nosotros', function () {
     return Inertia::render('Nosotros', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
     ]);
 });
 
@@ -106,5 +102,10 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::delete('/cardlist/{list}', [CardListController::class, 'destroy'])->name('cardLists.destroy');
 });
 
+// stripe
+
+Route::get('/dona', 'App\Http\Controllers\StripeController@index')->name('dona');
+Route::post('/checkout', 'App\Http\Controllers\StripeController@checkout')->name('checkout');
+Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
 
 require __DIR__ . '/auth.php';

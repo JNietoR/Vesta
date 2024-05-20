@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    /*========== Colores ==========*/
+    --first-color: #2a4a8e;
+    --first-color-light: #2a4a8e4c;
+    --first-color-lighten: #271111;
+    --gradient-color: linear-gradient(90deg, #111827, #1a2743);
+    --title-color: hsl(175, 40%, 16%);
+    --text-color: hsl(175, 8%, 50%);
+    --white-color: #fff;
+    --body-color: hsl(175, 100%, 99%);
+}
+
+#h2nosotros {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 5vw;
+    position: relative;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: -10%;
+}
+
+#blockquotenosotros {
+    color: white;
+    font-size: 1vw;
+    position: relative;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 2vw;
+    box-sizing: border-box;
+}
+
+.imagen-container {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    bottom: 5vw;
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+#imgnosotros {
+    width: 500px;
+    height: 500px;
+    scale: 130%;
+    box-sizing: border-box;
+}
+
+.imagen-container > img {
+    clip-path: inset(90px 40px 90px 40px);
+    box-sizing: border-box;
+}
+
+.imagen-container img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.texto-creadores {
+    text-align: center;
+    grid-column: span 2;
+}
+
+#h5nostros {
+    color: #abd9d9;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+
+#h3nosotros {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 2.2vw;
+}
+
+/*========== Base ==========*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#bodynosotros {
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+#ulnosotros {
+    list-style: none;
+}
+
+#anosotros {
+    text-decoration: none;
+}
+
+#imgnosotros {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    font-family: "Poppins", sans-serif;
+}
+
+/*========== Carta ==========*/
+
+.card {
+    position: relative;
+    width: 275px;
+    background: var(--gradient-color);
+    border-radius: 1rem 1rem 11rem 11rem;
+    padding: 2.5rem 1.5rem 3.5rem;
+    text-align: center;
+    box-shadow: 8px 10px 32px hsla(177, 37%, 22%, 0.15);
+    flex: 0 0 auto;
+    margin: 0 10px;
+}
+
+.card__img {
+    width: 90px;
+}
+.card__border {
+    width: 124px;
+    height: 124px;
+    background-color: var(--first-color-light);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: grid;
+    place-items: center;
+}
+.card__perfil {
+    width: 104px;
+    height: 104px;
+    background-color: var(--first-color-lighten);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card__name,
+.card__profession {
+    color: var(--white-color);
+}
+.card__name {
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+.card__profession {
+    font-size: var(--smaller-font-size);
+    font-weight: 500;
+}
+
+/*========== Información ==========*/
+
+.info {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    padding: 2.5rem 1.5rem 3.3rem;
+    border-radius: 1rem 1rem 11rem 11rem;
+    clip-path: circle(16px at 250px 40px);
+    transition: clip-path 0.4s ease-in-out;
+}
+.info__icon {
+    position: absolute;
+    top: 1.15rem;
+    right: 0.54rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+    display: inline-flex;
+    padding: 0.25rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.info__img {
+    width: 45px;
+}
+.info__border {
+    width: 64px;
+    height: 64px;
+    background-color: var(--first-color-light);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: grid;
+    place-items: center;
+    transform: translateX(-3rem);
+    transition: transform 0.8s;
+}
+.info__perfil {
+    width: 52px;
+    height: 52px;
+    background-color: var(--first-color-lighten);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.info__data {
+    display: grid;
+    row-gap: 0.25rem;
+    margin-bottom: 1.5rem;
+    transform: translateX(-4rem);
+    transition: transform 1s;
+}
+.info__name {
+    font-family: "Poppins", sans-serif;
+    font-size: var(--normal-font-size);
+    color: var(--title-color);
+}
+.info__profession,
+.info__location {
+    font-size: var(--smaller-font-size);
+}
+.info__social {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+    transform: translateX(-5rem);
+    transition: transform 1.2s;
+}
+.info__social-link {
+    width: 32px;
+    height: 32px;
+    background-color: var(--first-color-light);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: transform 0.3s;
+}
+.info__social-link:hover {
+    transform: translateY(-0.25rem);
+}
+.info__social-icon {
+    display: flex;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    background: var(--gradient-color);
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-size: 1rem;
+}
+
+/*========== Animación ==========*/
+.info:hover {
+    clip-path: circle(75%);
+}
+.info:hover .info__icon {
+    opacity: 0;
+}
+.info:hover .info__border,
+.info:hover .info__data,
+.info:hover .info__social {
+    transform: translateX(0);
+}
+
+.tarjetas-contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 20px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2em !important;
+        display: block !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        margin-right: 3vw !important;
+    }
+    .imagen-container {
+        padding-right: 10vw;
+    }
+    .text-container {
+        scale: 0;
+    }
+    .texto-creadores {
+        scale: 400%;
+        padding-bottom: 5vw;
+    }
+    .tarjetas-contenedor {
+        display: block;
+        margin-left: 25vw;
+        text-align: center;
+        padding-bottom: 2vw;
+    }
+    .card {
+        margin-bottom: 2vw;
+    }
+}

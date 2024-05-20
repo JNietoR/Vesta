@@ -39,7 +39,7 @@ const submit = () => {
         <div class='air air2'></div>
         <div class='air air3'></div>
         <div class='air air4'></div>
-        
+
         <GuestLayout class="fondo">
 
 
@@ -95,6 +95,7 @@ const submit = () => {
     </div>
 </template>
 <style scoped>
+@import '../../../css/auth.css';
 .txt-register {
   font-size: 14px;
   text-decoration: underline;
@@ -102,5 +103,5 @@ const submit = () => {
 .txt-register:hover {
   color: #0c398b;
 }
-@import '../../../css/auth.css';
+
 </style>
