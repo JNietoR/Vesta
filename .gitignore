@@ -16,3 +16,5 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+vite.config.js
+/app/Providers/AppServiceProvider.php

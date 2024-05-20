@@ -4,6 +4,7 @@ import { ref, onMounted, onBeforeUnmount } from "vue"; //PARALLAX
 import { ArchiveBoxIcon, ClockIcon } from "@heroicons/vue/24/solid";
 import { Inertia } from "@inertiajs/inertia";
 import { useForm } from "@inertiajs/vue3";
+import footerTw from '@/Components/footer.vue';
 
 const form = useForm({});
 
@@ -14,7 +15,6 @@ const submitForm = () => {
         },
     });
 };
-
 defineProps({
     canLogin: {
         type: Boolean,
@@ -63,7 +63,7 @@ onMounted(() => {
     observer.observe(animatedButton.value);
 });
 
-/**************************H2 ANIMADO*************************/
+/**************************H2 ANIMADO*************************
 const animatedH2 = ref(null);
 
 onMounted(() => {
@@ -83,14 +83,18 @@ onMounted(() => {
     );
 
     observer.observe(animatedH2.value);
-});
+});*/
+
+
 </script>
 
 <template>
     <Head title="Welcome" />
 
     <!--contenedor global-->
-    <div>
+        <div class="black-gradiant">
+
+
         <div class="container">
             <div id="stars"></div>
             <div id="stars2"></div>
@@ -109,63 +113,32 @@ onMounted(() => {
         </div>
 
         <div
-            class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-center selection:bg-red-500 selection:text-white"
-        >
-            <div
-                v-if="canLogin"
-                class="sm:fixed sm:top-0 sm:right-0 p-6 text-end"
-            >
-                <Link
-                    v-if="$page.props.auth.user"
-                    :href="route('dashboard')"
-                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                >
-                    Dashboard</Link
-                >
+            class="black-gradiant relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center   selection:bg-red-500 selection:text-white">
+            <div v-if="canLogin" class="  sm:fixed sm:top-0 sm:right-0 p-6 text-end">
+                <Link v-if="$page.props.auth.user" :href="route('dashboard')"
+                    class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                Dashboard</Link>
 
                 <template v-else>
-                    <Link
-                        :href="route('login')"
-                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >
-                        Log in</Link
-                    >
+                    <Link :href="route('login')"
+                        class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                    Log in</Link>
 
-                    <Link
-                        v-if="canRegister"
-                        :href="route('register')"
-                        class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                    >
-                        Register</Link
-                    >
+                    <Link v-if="canRegister" :href="route('register')"
+                        class="ms-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                    Register</Link>
                 </template>
             </div>
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg
-                        class="animate__animated animate__fadeIn max-w-2xl flex justify-center mx-auto p-6 lg:p-8"
-                        version="1.1"
-                        id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        x="0px"
-                        y="0px"
-                        viewBox="0 0 612 792"
-                        enable-background="new 0 0 612 792"
-                        xml:space="preserve"
-                    >
-                        <ellipse
-                            transform="matrix(-0.5432 -0.8396 0.8396 -0.5432 322.6096 615.6422)"
-                            fill="#FFFFFF"
-                            cx="328.8"
-                            cy="220.1"
-                            rx="3.2"
-                            ry="8.7"
-                        />
-                        <path
-                            fill="#FFFFFF"
-                            d="M294.9,236.5c-0.6,1.5-1,3.2-2.7,3.9c-4.6,1.9-8.5,5.1-10.5,9.6c-1.3,2.9-1.6,6.4-2.7,9.6
+                <div class="flex justify-center ">
+                    <svg class="animate__animated animate__fadeIn max-w-2xl flex justify-center mx-auto  p-6 lg:p-8 "
+                        version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 792"
+                        enable-background="new 0 0 612 792" xml:space="preserve">
+                        <ellipse transform="matrix(-0.5432 -0.8396 0.8396 -0.5432 322.6096 615.6422)" fill="#FFFFFF"
+                            cx="328.8" cy="220.1" rx="3.2" ry="8.7" />
+                        <path fill="#FFFFFF" d="M294.9,236.5c-0.6,1.5-1,3.2-2.7,3.9c-4.6,1.9-8.5,5.1-10.5,9.6c-1.3,2.9-1.6,6.4-2.7,9.6
 	c-0.1,0.4-0.5,0.6-0.9,0.4c-0.1,0-0.2-0.1-0.3-0.2c-2.3-2.9-2.8-7.8-2.7-11.5c0.8-20.8,20.2-34.1,40.1-28.2c0.6,0.2,0.9,0.8,0.7,1.3
 	c0,0,0,0.1,0,0.1c-0.7,1.8-1.9,2.8-3.9,3C304.8,225,297.6,229.9,294.9,236.5z"
                         />
@@ -334,19 +307,10 @@ onMounted(() => {
                 </div>
 
                 <!--DESCRIPCION DEL PROYECTO-->
-                <div
-                    class="container-text mx-auto parallax"
-                    :style="{ opacity: opacityValue }"
-                >
-                    <h2
-                        class="text-9xl text-center text-white m-20 p-50 titulo"
-                    >
-                        VESTA
-                    </h2>
-                    <blockquote>
-                        <p
-                            class="font-extralight text-2xl description-txt mt-8"
-                        >
+                <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
+                    <h1 class="  h2-768 text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
+                    <blockquote class="block-768" >
+                        <p class="ttl-768 font-extralight text-2xl description-txt mt-8">
                             <q>
                                 <i>
                                     “La sabiduría no es solo conocimiento, sino
@@ -360,15 +324,12 @@ onMounted(() => {
                 </div>
 
                 <div class="parallax" :style="{ opacity: opacityValue }">
-                    <div
-                        class="flex items-center justify-center my-10 animate__animated animate__fadeIn"
-                        ref="animatedButton"
-                    >
-                        <a
-                            class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover"
-                            :href="route('login')"
-                            >Únete</a
-                        >
+                    <div class=" flex items-center justify-center my-10 animate__animated animate__fadeIn"
+                        ref="animatedButton">
+                        <div class="btn-dona-une">
+                            <a class=" dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
+                                :href="route('login')">Únete</a>
+                        </div>
                     </div>
                 </div>
 
@@ -377,20 +338,15 @@ onMounted(() => {
                     :style="{ opacity: opacityValue }"
                 >
                     <div>
-                        <h2
-                            class="h2-768 text-7xl text-white m-20 p-50 titulo animateanimated animatebackInRight"
-                            ref="animatedH2"
-                        >
-                            ¿Qué ofrece Vesta?
-                        </h2>
+                        <h2 class=" h2-768 text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
+                            ref="animatedH2">
+                            ¿Qué ofrece Vesta?</h2>
                     </div>
                     <!----SECCION DE CARTAS-->
                     <div class="mt-16">
-                        <div class="iconos">
-                            <a
-                                href="https://laravel.com/docs"
-                                class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
-                            >
+                        <div class="iconos iconos-768">
+                            <a href="https://laravel.com/docs"
+                                class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                                 <div>
                                     <div
                                         class="h-16 w-16 flex items-center justify-center rounded-full"
@@ -470,34 +426,16 @@ onMounted(() => {
                                     />
                                 </svg>
                             </a>
-
-                            <a
-                                href="https://laravel-news.com"
-                                class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
-                            >
+                            <a href="https://laracasts.com"
+                                class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                                 <div>
                                     <div
-                                        class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="1.5"
-                                            class="w-7 h-7 stroke-red-500"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
-                                            />
-                                        </svg>
+                                        class="h-16 w-16 bg-red-50 dark:bg-blue-800/20 flex items-center justify-center rounded-full">
+                                        <ClockIcon class="w-16 h-16 text-iconos" />
                                     </div>
 
-                                    <h2
-                                        class="mt-6 text-xl font-semibold text-gray-900 dark:text-white"
-                                    >
-                                        Laravel News
+                                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
+                                        Optimiza tu tiempo
                                     </h2>
 
                                     <p
@@ -521,33 +459,16 @@ onMounted(() => {
                                     />
                                 </svg>
                             </a>
-
-                            <div
-                                class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
-                            >
+                            <a href="https://laracasts.com"
+                                class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                                 <div>
                                     <div
-                                        class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke-width="1.5"
-                                            class="w-7 h-7 stroke-red-500"
-                                        >
-                                            <path
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64"
-                                            />
-                                        </svg>
+                                        class="h-16 w-16 bg-red-50 dark:bg-blue-800/20 flex items-center justify-center rounded-full">
+                                        <ClockIcon class="w-16 h-16 text-iconos" />
                                     </div>
 
-                                    <h2
-                                        class="mt-6 text-xl font-semibold text-gray-900 dark:text-white"
-                                    >
-                                        Vibrant Ecosystem
+                                    <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
+                                        Optimiza tu tiempo
                                     </h2>
 
                                     <p
@@ -556,7 +477,16 @@ onMounted(() => {
                                         texto descriptivo
                                     </p>
                                 </div>
-                            </div>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                </svg>
+                            </a>
+
+
+
                         </div>
                     </div>
                 </section>
@@ -756,8 +686,11 @@ onMounted(() => {
             </div>
         </div>
     </div>
+
+    <footerTw />
 </template>
 
 <style>
-@import "../../css/welcome.css";
+@import '../../css/welcome.css';
+@import '../../css/footer.css';
 </style>

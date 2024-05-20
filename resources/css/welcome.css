@@ -17,6 +17,14 @@ body {
 
 }
 
+.btn-dona-une{
+  transition: all .3s ease;
+}
+.btn-dona-une:hover{
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
 .grid-container {
   display: grid;
   place-content: center;
@@ -30,6 +38,7 @@ body {
     "box10 box11 box7  box7  box8  box9"
     "box12 box12 box13 box13 box14 box14";
     margin: auto;
+    margin: auto;
 }
 
 .grid-container p {
@@ -37,7 +46,7 @@ body {
 }
 
 .grid-item {
-  background-color: #1b2735;
+  background-color: #1d2c3d;
   padding: .5rem 1rem;
   text-align: center;
   display: flex;
@@ -49,16 +58,17 @@ body {
 
 .grid-item:hover {
   cursor: pointer;
-  background-color: #ffffff91;
-  outline: 1px solid #2b4a9d;
-  box-shadow: 0 0 20px rgb(68, 249, 255);
+  background: linear-gradient(to top, #0000005e 10%, #ffffffb6 70%);
+  outline: 1px solid #ffffff;
+  box-shadow: 0 0 40px rgb(255, 255, 255);
+  color: #000000;
 
 
 }
 
 .contenedor-txt {
-  width:100%;
-  max-width:100%;
+  width: 100%;
+  max-width: 100%;
 }
 
 .contenedor-txt p {
@@ -68,14 +78,14 @@ body {
 
 /******HACER RESPONSIVE EN MOVIL***** */
 .contenedor-derecha {
-  display:flex;
-  align-items:center;
-  justify-content:center;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .btn-unete{
-  margin:0;
-  margin-bottom:20px;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .grid-item-1 {
@@ -168,7 +178,9 @@ body {
   -webkit-text-fill-color: transparent;
   margin: auto;
   font-size: 2.5rem;
+  transition:  all 4s ease;
 }
+
 
 .grid-item img {
   width: 50%;
@@ -178,6 +190,20 @@ body {
 /************MEDIAS*****************/
 /**MOVIL**/
 @media (max-width:768px) {
+
+  .iconos {
+    display: block !important;
+
+  }
+
+  .iconos-768{
+    display: block !important;
+    width: 100%;
+  }
+  .parallax h1 {
+    padding: 1rem;
+    font-size: 5em;
+  }
   .grid-container {
     display: block;
     width: 93%;
@@ -214,14 +240,10 @@ body {
     height: 250px;
   }
 
-  .iconos {
-    display: block;
-    width: 100%;
-    padding: 0.5em;
-  }
 
   .iconos a {
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+    width: 100% !important;
   }
 
   .titulo {
@@ -247,9 +269,50 @@ body {
   }
   /**ARREGLAR*/
   .contenedor-derecha {
-    position: relative;
-    top: 100px;
+    width: 100% ;
+    max-width: 100%;
+    top: 0px !important;
+
   }
+
+  .contenedor-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+ .block-768{
+  width: 100%;
+
+ }
+
+ .btn-768{
+  width: 44%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+  .h2-768{
+    padding-top: 1em !important;
+    margin: 0em !important;
+    text-align: center;
+  }
+  .container-text{
+    width: 100% !important;
+  }
+  .parallax p{
+    width: 100% !important;
+  }
+  .ttl-768{
+    padding: 0 !important;
+    padding-bottom: 2em !important;
+    text-align: center;
+  }
+
+
+
+
+
 }
 
 /**tablet*/
@@ -259,7 +322,23 @@ body {
     font-size: 1em
   }
 
+  .iconos {
+    display: block !important;
 
+
+  }
+.iconos a{
+  float: left;
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+.parallax2 h2{
+  text-align: center;
+}
+.contenedor-derecha{
+  margin-bottom: 50px;
+}
 }
 
 
@@ -362,13 +441,20 @@ body {
 
 /* This only changes this particular animation duration */
 .animate__animated.animate__fadeIn {
-  --animate-duration: 7s;
+  --animate-duration: 4s;
+}
+
+.animate__animated.animate__backInLeft {
+  --animate-duration: 4s;
+}
+.animate__animated.animate__backInRight {
+  --animate-duration: 4s;
 }
 
 /* This changes all the animations globally */
 :root {
   --animate-duration: 1000ms;
-  --animate-delay: 1.9s;
+  --animate-delay: 4.9s;
 }
 
 
@@ -444,8 +530,6 @@ body {
 
 .parallax h1 {
   padding: 1rem;
-  font-style: italic;
-  text-shadow: 2px 23px 4px #000000;
 }
 
 hr {
@@ -472,7 +556,9 @@ body {
   justify-content: space-evenly;
   align-items: center;
 
+
 }
+
 
 .colorIcons {
   color: #b3e7ff;
