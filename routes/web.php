@@ -35,6 +35,8 @@ Route::get('/Nosotros', function () {
     ]);
 });
 
+
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -105,6 +107,7 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
 // stripe
 
 Route::get('/dona', 'App\Http\Controllers\StripeController@index')->name('dona');
+Route::get('/privacy')->name('privacy');
 Route::post('/checkout', 'App\Http\Controllers\StripeController@checkout')->name('checkout');
 Route::get('/success', 'App\Http\Controllers\StripeController@success')->name('success');
 

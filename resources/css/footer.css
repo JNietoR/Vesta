@@ -17,9 +17,11 @@
 .fw{
     width: 100%;
     max-width: 100%;
+    display: block ruby;
+    padding-bottom: 30px;
 }
 .border-img {
-    width: 50%;
+    width: 20%;
     border-radius: 50%;
    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0);
 }
