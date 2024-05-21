@@ -7,8 +7,55 @@
     -moz-animation: AnimationName 59s ease infinite;
     -o-animation: AnimationName 59s ease infinite;
     animation: AnimationName 59s ease infinite;
+    background-color: blue;
 }
 
+.contenedor-margen{
+  margin-bottom: 70%;
+}
+
+.login-hori{
+  width: 100%;
+  align-items: flex-end;
+  justify-items: flex-end;
+  max-width: 40%;
+  height: 46vh;
+  padding-right: 30px;
+  border: 1px solid black;
+  
+ 
+}
+.login-hori::before{
+  content: "";
+  display: block;
+  width: 19%;
+ 
+  height: 46vh;
+  z-index: 999999999999999999999999;
+  position: absolute;
+  top:313px;
+  left:770px;
+  border-radius: 3px;
+
+  background-image: url('../../public/assets/logo/LogoBlanco.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(31, 31, 34, 0.425);
+  
+}
+
+.login-hori form{
+  display: block;
+  float: right;
+  width: 50%;
+  padding-top: 100px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+
+
+}
 @-webkit-keyframes AnimationName {
     0%{background-position:55% 0%}
     50%{background-position:46% 100%}
