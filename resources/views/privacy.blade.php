@@ -139,7 +139,7 @@ a[rel~=nofollow]:hover {
 <div class="flex justify-center items-center h-screen">
    <blockquote>
         <p>
-            <h2 class="text-lg font-semibold text-gray-800 mb-2">Política de Privacidad</h2>
+            <h1 class="text-lg font-semibold text-gray-800 mb-2">Política de Privacidad</h1>
             <div class="page">
                 <div class="header">
                 <div class="container">

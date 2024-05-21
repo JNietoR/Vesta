@@ -1,4 +1,11 @@
+<script setup>
+import { Head, Link } from "@inertiajs/vue3";
 
+const navigateToNosotros = () => {
+    return '/Nosotros';
+}
+
+</script>
 <template>
     <!--
   Heads up! 👋
@@ -19,7 +26,9 @@
 
                     <ul class="mt-6 space-y-6 text-sm">
                         <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> Meet the Team </a>
+                            <Link :href="navigateToNosotros()" class="text-white transition hover:opacity-75">
+                            Meet the Team</Link>
+
                         </li>
                         <li></li>
                     </ul>
