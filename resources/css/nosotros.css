@@ -292,15 +292,8 @@
         justify-content: center;
     }
 
-    #blockquoteNosotros {
-        color: white;
-        font-size: 3vw;
-        text-align: center;
-        order: 1;
-    }
-
-    #textoh2 {
-        transform: scale(0);
+    .text-container {
+        display: none;
     }
 
     #imagen-container {
@@ -355,7 +348,7 @@
     }
 
     #blockquoteNosotros {
-        color: white;
+        color: rgb(255, 255, 255);
         font-size: 2.5vw;
         text-align: center;
         margin-top: -5vw;
@@ -390,7 +383,8 @@
         text-align: center;
     }
     .tarjetas-contenedor {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
         margin: auto;
         text-align: center;
         padding-bottom: 2vw;
