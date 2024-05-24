@@ -72,7 +72,7 @@ defineProps({
                             </blockquote>
                         </div>
                         <div id="imagen-container">
-                            <img src="/assets/logo/LogoBlanco.svg" id="img" />
+                            <img src="/storage/logo/LogoBlanco.svg" id="img" />
                         </div>
                         <div class="texto-creadores">
                             <h5 id="textoh5">Creadores</h5>
