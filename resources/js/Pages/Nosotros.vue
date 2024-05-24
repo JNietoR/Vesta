@@ -65,34 +65,31 @@ defineProps({
                                 Diosa del Hogar y la Organización
                             </h2>
                             <blockquote id="blockquoteNosotros">
-                                <i
+                                <i class="prueba"
                                     >''La herramienta definitiva para la gestión
                                     de tu vida laboral y personal''</i
                                 >
                             </blockquote>
                         </div>
                         <div id="imagen-container">
-                            <img src="/storage/logo/LogoBlanco.svg" id="img" />
+                            <img src="/assets/logo/LogoBlanco.svg" id="img" />
                         </div>
                         <div class="texto-creadores">
                             <h5 id="textoh5">Creadores</h5>
-                            <h3 id="textoh3">¿Quienés somos?</h3>
+                            <h3 id="textoh3">¿Quiénes somos?</h3>
                         </div>
                         <div class="tarjetas-contenedor">
                             <div class="card">
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            id="imgnosotros"
                                             src="/storage/caras/irene.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
                                     </div>
                                 </div>
-                                <h3 id="h3nosotros" class="card__name">
-                                    Irene Oliver Correa
-                                </h3>
+                                <h3 class="card__name">Irene Oliver Correa</h3>
                                 <span class="card__profession"
                                     >Full-stack Developer</span
                                 >
@@ -105,7 +102,6 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                id="imgnosotros"
                                                 src="/storage/caras/irene.jpg"
                                                 alt="card image"
                                                 class="info__img img"
@@ -114,7 +110,7 @@ defineProps({
                                     </div>
 
                                     <div class="info__data">
-                                        <h3 id="h3nosotros" class="info__name">
+                                        <h3 class="info__name">
                                             Irene Oliver Correa
                                         </h3>
                                         <span class="info__profession">
@@ -127,7 +123,6 @@ defineProps({
 
                                     <div class="info__social">
                                         <a
-                                            id="anosotros"
                                             href="https://www.linkedin.com/in/ireneoliver/"
                                             target="_blank"
                                             class="info__social-link"
@@ -141,7 +136,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="https://github.com/IOliverC"
                                             target="_blank"
                                             class="info__social-link"
@@ -153,7 +147,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="mailto:irene.oliver.correa4@gmail.com"
                                             target="_blank"
                                             class="info__social-link"
@@ -170,16 +163,13 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            id="imgnosotros"
-                                            src="/storage/caras/irene.jpg"
+                                            src="/storage/caras/jorge.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
                                     </div>
                                 </div>
-                                <h3 id="h3nosotros" class="card__name">
-                                    Jorge Nieto Roldán
-                                </h3>
+                                <h3 class="card__name">Jorge Nieto Roldán</h3>
                                 <span class="card__profession"
                                     >Full-stack Developer</span
                                 >
@@ -192,8 +182,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                id="imgnosotros"
-                                                src="/storage/caras/irene.jpg"
+                                                src="/storage/caras/jorge.jpg"
                                                 alt="card image"
                                                 class="info__img img"
                                             />
@@ -201,7 +190,7 @@ defineProps({
                                     </div>
 
                                     <div class="info__data">
-                                        <h3 id="h3nosotros" class="info__name">
+                                        <h3 class="info__name">
                                             Jorge Nieto Roldán
                                         </h3>
                                         <span class="info__profession">
@@ -214,7 +203,6 @@ defineProps({
 
                                     <div class="info__social">
                                         <a
-                                            id="anosotros"
                                             href="https://www.linkedin.com/in/jorgenietor"
                                             target="_blank"
                                             class="info__social-link"
@@ -228,7 +216,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="https://github.com/JNietoR"
                                             target="_blank"
                                             class="info__social-link"
@@ -240,7 +227,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="mailto:jorge.nieto35@gmail.com "
                                             target="_blank"
                                             class="info__social-link"
@@ -257,14 +243,13 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            id="imgnosotros"
-                                            src="/storage/caras/irene.jpg"
+                                            src="/storage/caras/manuel.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
                                     </div>
                                 </div>
-                                <h3 id="h3nosotros" class="card__name">
+                                <h3 class="card__name">
                                     Jose Manuel garcía Muñoz
                                 </h3>
                                 <span class="card__profession"
@@ -279,8 +264,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                id="imgnosotros"
-                                                src="/storage/caras/irene.jpg"
+                                                src="/storage/caras/manuel.jpg"
                                                 alt="card image"
                                                 class="info__img img"
                                             />
@@ -288,7 +272,7 @@ defineProps({
                                     </div>
 
                                     <div class="info__data">
-                                        <h3 id="h3nosotros" class="info__name">
+                                        <h3 class="info__name">
                                             Jose Manuel garcía Muñoz
                                         </h3>
                                         <span class="info__profession">
@@ -301,7 +285,6 @@ defineProps({
 
                                     <div class="info__social">
                                         <a
-                                            id="anosotros"
                                             href="https://www.linkedin.com/in/manugm07"
                                             target="_blank"
                                             class="info__social-link"
@@ -315,7 +298,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="https://github.com/lojnoe"
                                             target="_blank"
                                             class="info__social-link"
@@ -327,7 +309,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="mailto:manu872003@gmail.com "
                                             target="_blank"
                                             class="info__social-link"
@@ -344,16 +325,13 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            id="imgnosotros"
-                                            src="/storage/caras/irene.jpg"
+                                            src="/storage/caras/alvaro.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
                                     </div>
                                 </div>
-                                <h3 id="h3nosotros" class="card__name">
-                                    Álvaro Olmos Sierra
-                                </h3>
+                                <h3 class="card__name">Álvaro Olmos Sierra</h3>
                                 <span class="card__profession"
                                     >Front-end Developer</span
                                 >
@@ -366,8 +344,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                id="imgnosotros"
-                                                src="/storage/caras/irene.jpg"
+                                                src="/storage/caras/alvaro.jpg"
                                                 alt="card image"
                                                 class="info__img img"
                                             />
@@ -375,7 +352,7 @@ defineProps({
                                     </div>
 
                                     <div class="info__data">
-                                        <h3 id="h3nosotros" class="info__name">
+                                        <h3 class="info__name">
                                             Álvaro Olmos Sierra
                                         </h3>
                                         <span class="info__profession">
@@ -388,7 +365,6 @@ defineProps({
 
                                     <div class="info__social">
                                         <a
-                                            id="anosotros"
                                             href="https://www.linkedin.com/in/alvaros1998/"
                                             target="_blank"
                                             class="info__social-link"
@@ -402,7 +378,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="https://github.com/AlvarOSierra1998"
                                             target="_blank"
                                             class="info__social-link"
@@ -414,7 +389,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="mailto:alvaro-olmos12@hotmail.com"
                                             target="_blank"
                                             class="info__social-link"
@@ -431,14 +405,13 @@ defineProps({
                                 <div class="card__border">
                                     <div class="card__perfil">
                                         <img
-                                            id="imgnosotros"
-                                            src="/storage/caras/irene.jpg"
+                                            src="/storage/caras/nieves.jpg"
                                             alt="card image"
                                             class="card_img"
                                         />
                                     </div>
                                 </div>
-                                <h3 id="h3nosotros" class="card__name">
+                                <h3 class="card__name">
                                     Nieves Lopez Torregrosa
                                 </h3>
                                 <span class="card__profession"
@@ -453,8 +426,7 @@ defineProps({
                                     <div class="info__border">
                                         <div class="info__perfil">
                                             <img
-                                                id="imgnosotros"
-                                                src="/storage/caras/irene.jpg"
+                                                src="/storage/caras/nieves.jpg"
                                                 alt="card image"
                                                 class="info__img img"
                                             />
@@ -462,7 +434,7 @@ defineProps({
                                     </div>
 
                                     <div class="info__data">
-                                        <h3 id="h3nosotros" class="info__name">
+                                        <h3 class="info__name">
                                             Nieves Lopez Torregrosa
                                         </h3>
                                         <span class="info__profession">
@@ -475,7 +447,6 @@ defineProps({
 
                                     <div class="info__social">
                                         <a
-                                            id="anosotros"
                                             href="https://www.linkedin.com/in/alvaros1998/"
                                             target="_blank"
                                             class="info__social-link"
@@ -489,7 +460,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="https://github.com/AlvarOSierra1998"
                                             target="_blank"
                                             class="info__social-link"
@@ -501,7 +471,6 @@ defineProps({
                                         </a>
 
                                         <a
-                                            id="anosotros"
                                             href="mailto:alvaro-olmos12@hotmail.com"
                                             target="_blank"
                                             class="info__social-link"
@@ -531,21 +500,4 @@ defineProps({
 }
 
 /* Oculta la barra de desplazamiento para IE, Edge y Firefox */
-html,
-body {
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE and Edge */
-}
-
-.bg-dots-darker {
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E");
-}
-
-@media (prefers-color-scheme: dark) {
-    .dark\:bg-dots-lighter {
-        background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
-    }
-}
 </style>
