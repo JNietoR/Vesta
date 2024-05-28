@@ -137,3 +137,9 @@
       background-position-x: -1000px; 
     }
   }
+  @media (max-width: 768px) {
+    .wave-container .air{
+      
+      display: none;
+    }
+  }
