@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Inertia\Inertia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 class StripeController extends Controller
 {
     public function index()
     {
-         return view('dona');
+        return view('dona');
         // return Inertia::render('Welcome');
     }
     public function checkout()
@@ -36,6 +37,9 @@ class StripeController extends Controller
     }
     public function success()
     {
-        return Inertia::render('Welcome');
+        return Inertia::render('Welcome', [
+            'canLogin' => Route::has('login'),
+            'canRegister' => Route::has('register'),
+        ]);
     }
 }
