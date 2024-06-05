@@ -28,7 +28,7 @@ function onSubmit(closePopover) {
   <Head title="Boards"/>
 
   <AuthenticatedLayout>
-    <div class="px-4 py-6 h-full bg-gray-50 overflow-y-auto">
+    <div class="px-4 py-6 h-full overflow-y-auto min-h-96">
         <div class="mx-auto max-w-5xl">
           <div class="flex items-center px-3 mb-4">
             <h3 class="font-black text-gray-700">My boards</h3>
@@ -76,7 +76,7 @@ function onSubmit(closePopover) {
                         class="text-sm text-red-600">{{ form.errors.name }}</p>
 
                       <div class="flex justify-end mt-2">
-                        <button class="px-4 py-2 text-sm font-medium text-white bg-rose-600 hover:bg-rose-500 rounded-md shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 focus:outline-none">Create board</button>
+                        <button class="px-4 py-2 text-sm font-medium text-white bg-gray-400 hover:bg-gray-500 rounded-md shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 focus:outline-none">Create board</button>
                       </div>
                     </form>
                   </div>
@@ -89,7 +89,7 @@ function onSubmit(closePopover) {
             <li
               v-for="board in boards"
               :key="board.id"
-              class="relative bg-blue-600 hover:bg-blue-700 rounded-md min-h-[7rem]">
+              class="relative bg-gray-400 hover:bg-gray-500 rounded-md min-h-[7rem]">
               <Link
                 :href="route('boards.show', {board: board.id})"
                 class="absolute inset-0 p-3 text-lg font-bold text-white">

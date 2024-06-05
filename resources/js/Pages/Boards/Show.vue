@@ -21,7 +21,7 @@ const deleteBoard = () => {
 </script>
 <template>
     <AuthenticatedLayout>
-        <div class="flex flex-col h-full bg-blue-600">
+        <div class="flex flex-col h-full bg-gray-400">
             <div class="shrink-0 flex flex-wrap justify-between items-center p-4">
                 <BoardNameForm :board="board" />
                 <div>

@@ -17,8 +17,8 @@ class DocumentoController extends Controller
     {
         $userId = auth()->id(); // Obtener el usuario actualmente autenticado
         $documentos = Documento::where('user_id', $userId)->orderBy('favorito', 'desc') // Ordenar favoritos primero
-        ->orderBy('created_at', 'desc') // Luego ordenar por fecha de creación
-        ->get(); // Obtener todos los documentos del usuario
+            ->orderBy('created_at', 'desc') // Luego ordenar por fecha de creación
+            ->get(); // Obtener todos los documentos del usuario
         return Inertia::render('documentos/index', [
             'documentos' => $documentos
         ]);
@@ -93,7 +93,7 @@ class DocumentoController extends Controller
      */
     public function destroy($id)
     {
-        
+
         $documento = Documento::find($id);
         $documento->delete();
 
@@ -104,12 +104,19 @@ class DocumentoController extends Controller
     public function toggleFavorito($id)
     {
         $documento = Documento::findOrFail($id);
-        
+
         // Cambiar el valor de favorito
         $documento->favorito = $documento->favorito == 1 ? 0 : 1;
         $documento->save();
 
         // Puedes redirigir a la página anterior o hacer otra acción deseada
         return back()->with('success', 'El documento favorito ha sido actualizado correctamente.');
+    }
+    public function recentDocuments()
+    {
+        $user = auth()->user();
+        $user_id = $user->id;
+        $documents = Documento::where('user_id',$user_id)->orderBy('updated_at', 'desc')->take(5)->get();
+        return response()->json($documents);
     }
 }

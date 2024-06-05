@@ -75,16 +75,13 @@ const deleteList = () => {
                     leave-from-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-90">
                     <MenuItems
                         class="overflow-hidden absolute left-0 mt-2 w-40 bg-white rounded-md border shadow-lg origin-top-left focus:outline-none">
-                        <MenuItem v-slot="{ active }">
-                        <a :class="{ 'bg-gray-100': active }" class="block px-4 py-2 text-sm text-gray-700" href="#">Add
-                            card</a>
-                        </MenuItem>
-                        <MenuItem v-slot="{ active }">
 
-                        <form @submit.prevent="deleteList" method="post">
+                        <MenuItem v-slot="{ active }" >
+
+                        <form @submit.prevent="deleteList" method="post" class="hover:bg-gray-100">
                             <input type="hidden" name="_method" value="delete">
-                            <button type="submit" :class="{ 'bg-gray-100': active }"
-                                class="block px-4 py-2 text-sm text-red-600">
+                            <button type="submit"
+                                class="block px-4 py-2 text-sm text-red-600 ">
                                 Delete list
                             </button>
                         </form>

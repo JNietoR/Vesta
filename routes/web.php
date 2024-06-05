@@ -68,13 +68,15 @@ Route::get('/documentos/{documento}/edit', function ($documentoId) {
 Route::put('/documentos/{documento}', [DocumentoController::class, 'update'])->name('UpdateDocumento');
 
 Route::delete('/documentos/{documento}', [DocumentoController::class, 'destroy'])->name('DestroyDocumento');
-
-// Possit
+Route::get('/documentos/recientes', [DocumentoController::class,'recentDocuments']);// Possit
 
 Route::get('/possit', function () {
     return Inertia::render('Possit');
 })->middleware(['auth', 'verified'])->name('possit');
 
+Route::get('/calendar', function () {
+    return Inertia::render('Calendar');
+})->middleware(['auth', 'verified'])->name('calendar');
 
 // Profile
 Route::middleware('auth')->group(function () {
@@ -102,6 +104,7 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::put('/cards/{card}/move', [CardController::class, 'move'])->name('cards.move');
     Route::delete('/cards/{card}', [CardController::class, 'destroy'])->name('cards.destroy');
     Route::delete('/cardlist/{list}', [CardListController::class, 'destroy'])->name('cardLists.destroy');
+    Route::get('/boards/recientes', [BoardController::class,'recentBoards']);
 });
 
 // stripe
