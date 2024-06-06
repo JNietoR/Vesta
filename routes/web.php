@@ -68,7 +68,10 @@ Route::get('/documentos/{documento}/edit', function ($documentoId) {
 Route::put('/documentos/{documento}', [DocumentoController::class, 'update'])->name('UpdateDocumento');
 
 Route::delete('/documentos/{documento}', [DocumentoController::class, 'destroy'])->name('DestroyDocumento');
-Route::get('/documentos/recientes', [DocumentoController::class,'recentDocuments']);// Possit
+Route::get('/documentos/recientes', [DocumentoController::class, 'recentDocuments']);
+Route::get('/boards/recientes', [BoardController::class, 'recentBoards']);
+
+
 
 Route::get('/possit', function () {
     return Inertia::render('Possit');
@@ -95,12 +98,12 @@ Route::middleware('auth')->group(function () {
 
 // Kanban
 
-Route::group(['middleware' => ['auth', 'verified']], function() {
+Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/boards/{board}/{card?}', [BoardController::class, 'show'])->name('boards.show');
     Route::put('/boards/{board}', [BoardController::class, 'update'])->name('boards.update');
     Route::get('/boards', [BoardController::class, 'index'])->name('boards');
     Route::post('/boards', [BoardController::class, 'store'])->name('boards.store');
-    Route::delete('/boards/{board}',[BoardController::class, 'destroy'])->name('boards.destroy');
+    Route::delete('/boards/{board}', [BoardController::class, 'destroy'])->name('boards.destroy');
 
     Route::post('/boards/{board}/lists', [CardListController::class, 'store'])->name('cardLists.store');
     Route::post('/cards', [CardController::class, 'store'])->name('cards.store');
@@ -108,10 +111,9 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::put('/cards/{card}/move', [CardController::class, 'move'])->name('cards.move');
     Route::delete('/cards/{card}', [CardController::class, 'destroy'])->name('cards.destroy');
     Route::delete('/cardlist/{list}', [CardListController::class, 'destroy'])->name('cardLists.destroy');
-    Route::get('/boards/recientes', [BoardController::class,'recentBoards']);
 });
-
 // stripe
+
 
 Route::get('/dona', 'App\Http\Controllers\StripeController@index')->name('dona');
 Route::get('/privacy', 'App\Http\Controllers\PrivacyController@index')->name('privacy');

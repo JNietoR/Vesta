@@ -33,7 +33,7 @@ const showingNavigationDropdown = ref(false);
                                     Dashboard
                                 </NavLink>
                                 <NavLink :href="route('documentos')" :active="route().current('documentos')">
-                                    Documentos
+                                    Documents
                                 </NavLink>
                                 <NavLink :href="route('boards')" :active="route().current('boards')">
                                     Kanban
@@ -42,7 +42,7 @@ const showingNavigationDropdown = ref(false);
                                     Pomodoro
                                 </NavLink>
                                 <NavLink :href="route('calendar')" :active="route().current('calendar')">
-                                    Calendario
+                                    Calendar
                                 </NavLink>
 
                             </div>
@@ -129,7 +129,7 @@ const showingNavigationDropdown = ref(false);
                             Dashboard
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('documentos')" :active="route().current('documentos')">
-                            Documentos
+                            Documents
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('boards')" :active="route().current('boards')">
                             Kanban
@@ -138,7 +138,7 @@ const showingNavigationDropdown = ref(false);
                             Pomodoro
                         </ResponsiveNavLink>
                         <ResponsiveNavLink :href="route('calendar')" :active="route().current('calendar')">
-                            Calendario
+                            Calendar
                         </ResponsiveNavLink>
 
                     </div>

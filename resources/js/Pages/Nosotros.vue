@@ -62,12 +62,12 @@ defineProps({
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                         <div class="text-container">
                             <h2 id="textoh2">
-                                Diosa del Hogar y la Organización
+                                Goddess of Home and Organization
                             </h2>
                             <blockquote id="blockquoteNosotros">
                                 <i class="prueba"
-                                    >''La herramienta definitiva para la gestión
-                                    de tu vida laboral y personal''</i
+                                    >''The ultimate tool for managing
+                                    your work and personal life''</i
                                 >
                             </blockquote>
                         </div>
@@ -75,8 +75,7 @@ defineProps({
                             <img src="/assets/logo/LogoBlanco.svg" id="img" />
                         </div>
                         <div class="texto-creadores">
-                            <h5 id="textoh5">Creadores</h5>
-                            <h3 id="textoh3">¿Quiénes somos?</h3>
+                            <h3 id="textoh3">Meet the Team</h3>
                         </div>
                         <div class="tarjetas-contenedor">
                             <div class="card">
@@ -114,7 +113,7 @@ defineProps({
                                             Irene Oliver Correa
                                         </h3>
                                         <span class="info__profession">
-                                            Desarrollo de Aplicaciones Web</span
+                                            Web Application Development</span
                                         >
                                         <span class="info__location"
                                             >Granada - España</span
@@ -194,7 +193,7 @@ defineProps({
                                             Jorge Nieto Roldán
                                         </h3>
                                         <span class="info__profession">
-                                            Desarrollo de Aplicaciones Web</span
+                                            Web Application Development</span
                                         >
                                         <span class="info__location"
                                             >Granada - España</span
@@ -250,7 +249,7 @@ defineProps({
                                     </div>
                                 </div>
                                 <h3 class="card__name">
-                                    Jose Manuel garcía Muñoz
+                                    Jose Manuel García Muñoz
                                 </h3>
                                 <span class="card__profession"
                                     >Back-end Developer
@@ -273,10 +272,10 @@ defineProps({
 
                                     <div class="info__data">
                                         <h3 class="info__name">
-                                            Jose Manuel garcía Muñoz
+                                            Jose Manuel García Muñoz
                                         </h3>
                                         <span class="info__profession">
-                                            Desarrollo de Aplicaciones Web</span
+                                            Web Application Development</span
                                         >
                                         <span class="info__location"
                                             >Granada - España</span
@@ -356,7 +355,7 @@ defineProps({
                                             Álvaro Olmos Sierra
                                         </h3>
                                         <span class="info__profession">
-                                            Desarrollo de Aplicaciones Web</span
+                                            Web Application Development</span
                                         >
                                         <span class="info__location"
                                             >Granada - España</span
@@ -438,7 +437,7 @@ defineProps({
                                             Nieves Lopez Torregrosa
                                         </h3>
                                         <span class="info__profession">
-                                            Desarrollo de Aplicaciones Web</span
+                                            Web Application Development</span
                                         >
                                         <span class="info__location"
                                             >Granada - España</span

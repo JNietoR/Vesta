@@ -328,7 +328,7 @@ onMounted(() => {
                         ref="animatedButton">
                         <div class="btn-dona-une">
                             <a class=" dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                                :href="route('login')">Únete</a>
+                                :href="route('login')">Join us</a>
                         </div>
                     </div>
                 </div>
@@ -340,7 +340,7 @@ onMounted(() => {
                     <div>
                         <h2 class=" h2-768 text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
                             ref="animatedH2">
-                            ¿Qué ofrece Vesta?</h2>
+                            What does Vesta offer?</h2>
                     </div>
                     <!----SECCION DE CARTAS-->
                     <div class="mt-16">
@@ -495,16 +495,11 @@ onMounted(() => {
                     <div>
                         <h2 class="h2-768 text-7xl text-white m-20 mb-0 pb-0 p-50 titulo animateanimated animatebackInLeft"
                             ref="animatedH2">
-                            El futuro de Vesta
+                            Future updates
                         </h2>
                         <blockquote
                             class=" contenedor-txt block-768 flex items-center justify-center text-center my-10 animateanimated animatefadeIn w-40 text-white">
-                            <p> ¡Vesta evoluciona! Tenemos planes para añadir
-                                diferentes funciones como alertas, chat en vivo
-                                así como integraciones a diferentes plataformas
-                                como puede ser Discord, Notion y más para
-                                mejorar tu experiencia. Estamos emocionados por
-                                estas nuevas funcionalidades. ¡Mantente atento!
+                            <p> Vesta is evolving! We have plans to add various features such as alerts, live chat, and integrations with different platforms like Discord, Notion, and more to enhance your experience. We are excited about these new functionalities. Stay tuned!
 
                             </p>
                         </blockquote>
@@ -513,14 +508,10 @@ onMounted(() => {
                             <div class="btn-unete btn-768 flex items-center justify-end my-10 0 animateanimated animatefadeIn"
                                 ref="animatedButton">
                                 <a href="/dona"
-                                    class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Dona</a>
+                                    class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Donate</a>
                             </div>
 
                         </div>
-
-
-
-
                     </div>
 
                     <div class="grid-container">

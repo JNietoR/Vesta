@@ -67,6 +67,6 @@ function onSubmit() {
     v-if="!isShowingForm"
     class="flex items-center p-2 text-sm font-medium text-gray-600 hover:text-black hover:bg-gray-300 w-full rounded-md">
     <PlusIcon class="h-5 w-5"></PlusIcon>
-    <span class="ml-1">Añadir Carta</span>
+    <span class="ml-1">Add Card</span>
   </button>
 </template>

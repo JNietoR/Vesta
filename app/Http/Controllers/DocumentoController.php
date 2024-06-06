@@ -116,7 +116,7 @@ class DocumentoController extends Controller
     {
         $user = auth()->user();
         $user_id = $user->id;
-        $documents = Documento::where('user_id',$user_id)->orderBy('updated_at', 'desc')->take(5)->get();
+        $documents = Documento::where('user_id',$user_id)->orderBy('updated_at', 'desc')->take(4)->get();
         return response()->json($documents);
     }
 }

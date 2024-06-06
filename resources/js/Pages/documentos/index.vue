@@ -1,7 +1,15 @@
 <template>
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Listado de Documentos</h2>
+
+            <div class="flex items-center justify-between">
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Documents</h2>
+                <Link :href="navigateToCreateDocumento()"
+                class="inline-flex items-center px-3 py-2 font-medium text-gray-700 bg-gray-100 rounded hover:bg-gray-200">
+                <PlusIcon class=" w-4 h-4"/>
+                <span class="ml-1">Create Document</span>
+                </Link>
+            </div>
         </template>
 
         <div class="py-12">
@@ -11,23 +19,18 @@
 
                         <!-- Lista de documentos -->
                         <div class="mt-4">
-                            <div class="flex justify-end items-center my-4">
-                                <Link :href="navigateToCreateDocumento()"
-                                    class="bg-gray-400 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded">
-                                +
-                                </Link>
-                            </div>
+
                             <div class="mt-4 overflow-x-scroll">
                                 <table class="text-left border border-gray-200 divide-y divide-gray-200">
                                     <!-- Encabezados de la tabla -->
                                     <thead>
                                         <tr>
-                                            <th class="py-3 px-6 text-left" style="width: 40%">Título</th>
-                                            <th class="oculta py-3 px-6 text-left" style="width: 20%">F. Creación</th>
-                                            <th class="oculta py-3 px-6 text-left" style="width: 20%">F. Actualización</th>
-                                            <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Favorito</th>
-                                            <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Editar</th>
-                                            <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Eliminar</th>
+                                            <th class="py-3 px-6 text-left" style="width: 40%">Title</th>
+                                            <th class="oculta py-3 px-6 text-left" style="width: 20%">Creation date</th>
+                                            <th class="oculta py-3 px-6 text-left" style="width: 20%">Update date</th>
+                                            <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Favorite</th>
+                                            <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Edit</th>
+                                            <th class="oculta no-padding-sm py-3 px-6 text-center" style="width: 10%">Delete</th>
                                         </tr>
                                     </thead>
                                     <!-- Cuerpo de la tabla -->
@@ -88,7 +91,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head, Link } from '@inertiajs/vue3';
 import { useForm } from '@inertiajs/vue3';
-import { TrashIcon, PencilIcon } from '@heroicons/vue/24/solid';
+import { TrashIcon, PencilIcon, PlusIcon} from '@heroicons/vue/24/solid';
 
 const form = useForm({});
 const props = defineProps({

@@ -46,7 +46,7 @@ const deleteBoard = () => {
                                     class="block px-4 py-2 text-sm text-red-600"
                                     @click.prevent="deleteBoard"
                                   >
-                                    Delete Tablero
+                                    Delete Board
                                   </Link>
                                 </MenuItem>
                             </MenuItems>

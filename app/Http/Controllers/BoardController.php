@@ -62,7 +62,7 @@ class BoardController extends Controller
     {
         $user = auth()->user();
         $user_id = $user->id;
-        $boards = Board::where('user_id',$user_id)->orderBy('updated_at', 'desc')->take(5)->get();
+        $boards = Board::where('user_id',$user_id)->orderBy('updated_at', 'desc')->take(4)->get();
         return response()->json($boards);
     }
 }

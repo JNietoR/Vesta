@@ -58,7 +58,7 @@
                         r="45"
                         fill="transparent"
                         stroke="#0000FF"
-                        stroke-width="20"
+                        stroke-width="10"
                         :stroke-dasharray="`${2 * Math.PI * 45} ${2 * Math.PI * 45}`"
                         :stroke-dashoffset="`${(1 - progress / totalTime) * 2 * Math.PI * 45}`"
                         transform="rotate(-90 50 50)"
