@@ -38,6 +38,9 @@ const showingNavigationDropdown = ref(false);
                                 <NavLink :href="route('boards')" :active="route().current('boards')">
                                     Kanban
                                 </NavLink>
+                                <NavLink :href="route('pomodoro')" :active="route().current('pomodoro')">
+                                    Pomodoro
+                                </NavLink>
                                 <NavLink :href="route('calendar')" :active="route().current('calendar')">
                                     Calendario
                                 </NavLink>
@@ -131,6 +134,13 @@ const showingNavigationDropdown = ref(false);
                         <ResponsiveNavLink :href="route('boards')" :active="route().current('boards')">
                             Kanban
                         </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('pomodoro')" :active="route().current('pomodoro')">
+                            Pomodoro
+                        </ResponsiveNavLink>
+                        <ResponsiveNavLink :href="route('calendar')" :active="route().current('calendar')">
+                            Calendario
+                        </ResponsiveNavLink>
+
                     </div>
 
                     <!-- Responsive Settings Options -->

@@ -78,6 +78,10 @@ Route::get('/calendar', function () {
     return Inertia::render('Calendar');
 })->middleware(['auth', 'verified'])->name('calendar');
 
+Route::get('/pomodoro', function () {
+    return Inertia::render('Pomodoro');
+})->middleware(['auth', 'verified'])->name('pomodoro');
+
 // Profile
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
