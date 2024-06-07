@@ -510,7 +510,12 @@ body {
   }
 }
 
-
+.margenes{
+  margin-bottom: 30em !important;
+}
+.margenes-2{
+  margin-bottom: 20em !important;
+}
 .parallax {
   display: block;
   max-width: 100%;

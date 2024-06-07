@@ -63,6 +63,45 @@ onMounted(() => {
     observer.observe(animatedButton.value);
 });
 
+/*****Organizar KANBAN***/
+const mostrarInfoOrganizar = ref(false);
+const mostrarInfoCartasOrganizar = () => {
+    mostrarInfoOrganizar.value = !mostrarInfoOrganizar.value;
+};
+
+
+/******Organizar**** */
+const mostrarInfoDocs = ref(false);
+const mostrarInfoCartasDocs = () => {
+    mostrarInfoDocs.value = !mostrarInfoDocs.value;
+};
+
+
+
+/*****Pomodoro**/
+const mostrarInfoPomodoro = ref(false);
+const mostrarInfoCartasPomodoro = () => {
+    mostrarInfoPomodoro.value = !mostrarInfoPomodoro.value;
+};
+
+
+
+/*****Calendario**** */
+const mostrarInfoCalendario = ref(false);
+const mostrarInfoCartasCalendario = () => {
+    mostrarInfoCalendario.value = !mostrarInfoCalendario.value;
+};
+
+
+
+
+
+
+
+
+
+
+
 /**************************H2 ANIMADO*************************
 const animatedH2 = ref(null);
 
@@ -91,7 +130,9 @@ onMounted(() => {
 <template>
     <Head title="Welcome" />
 
+
     <!--contenedor global-->
+   
         <div class="black-gradiant">
 
 
@@ -112,6 +153,7 @@ onMounted(() => {
             </div>
         </div>
 
+
         <div
             class="black-gradiant relative sm:flex sm:justify-center sm:items-center min-h-screen  bg-center   selection:bg-red-500 selection:text-white">
             <div v-if="canLogin" class="  sm:fixed sm:top-0 sm:right-0 p-6 text-end">
@@ -130,7 +172,12 @@ onMounted(() => {
                 </template>
             </div>
 
+           
+
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
+            <section class="margenes-2">
+
+                
                 <div class="flex justify-center ">
                     <svg class="animate__animated animate__fadeIn max-w-2xl flex justify-center mx-auto  p-6 lg:p-8 "
                         version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -283,15 +330,15 @@ onMounted(() => {
                         />
                     </svg>
                 </div>
-
+                
                 <!--flechitas-->
                 <div class="container-flechas">
                     <div class="flex justify-center">
                         <div class="flex justify-center">
                             <img
-                                class="w-40 flecha -mt-10"
-                                src="../../../public/assets/images/flecha.png"
-                                alt=""
+                            class="w-40 flecha -mt-10"
+                            src="../../../public/assets/images/flecha.png"
+                            alt=""
                             />
                         </div>
                     </div>
@@ -301,12 +348,14 @@ onMounted(() => {
                                 class="w-40 mx-auto flecha2"
                                 src="../../../public/assets/images/flecha.png"
                                 alt=""
-                            />
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!--DESCRIPCION DEL PROYECTO-->
+                </section>
+                    
+                    <!--DESCRIPCION DEL PROYECTO-->
+                <section class="margenes">  
                 <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
                     <h1 class="  h2-768 text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
                     <blockquote class="block-768" >
@@ -322,21 +371,21 @@ onMounted(() => {
                         </p>
                     </blockquote>
                 </div>
-
+                
                 <div class="parallax" :style="{ opacity: opacityValue }">
                     <div class=" flex items-center justify-center my-10 animate__animated animate__fadeIn"
-                        ref="animatedButton">
-                        <div class="btn-dona-une">
-                            <a class=" dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
-                                :href="route('login')">Join us</a>
-                        </div>
+                    ref="animatedButton">
+                    <div class="btn-dona-une">
+                        <a class=" dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover "
+                        :href="route('login')">Join us</a>
                     </div>
                 </div>
+            </div>
+        </section>
 
                 <section
-                    class="my-75 parallax2"
-                    :style="{ opacity: opacityValue }"
-                >
+                    class="my-75 parallax2 margenes"
+                    :style="{ opacity: opacityValue }">
                     <div>
                         <h2 class=" h2-768 text-7xl  text-white m-20 p-50 titulo animate__animated animate__backInRight"
                             ref="animatedH2">
@@ -345,7 +394,8 @@ onMounted(() => {
                     <!----SECCION DE CARTAS-->
                     <div class="mt-16">
                         <div class="iconos iconos-768">
-                            <a href="https://laravel.com/docs"
+                            <!----cartas-->
+                            <a href="" @click.prevent="mostrarInfoCartasOrganizar"
                                 class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                                 <div>
                                     <div
@@ -359,17 +409,17 @@ onMounted(() => {
 
                                     <h2
                                         class="mt-6 text-xl font-semibold text-gray-900 dark:text-white"
-                                    >
-                                        Organiza tu trabajo
+                                    >Tabla kanban
+                                        
                                     </h2>
 
                                     <p
                                         class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
                                     >
-                                        texto descriptivo
+                                        Organiza tu trabajo
                                     </p>
                                 </div>
-
+                        
                                 <!--flecha-->
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -386,8 +436,9 @@ onMounted(() => {
                                 </svg>
                             </a>
 
+                                
                             <a
-                                href="https://laracasts.com"
+                                href="#doc" @click.prevent="mostrarInfoCartasDocs"
                                 class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
                             >
                                 <div>
@@ -402,13 +453,13 @@ onMounted(() => {
                                     <h2
                                         class="mt-6 text-xl font-semibold text-gray-900 dark:text-white"
                                     >
-                                        Optimiza tu tiempo
+                                        Documentos
                                     </h2>
 
                                     <p
                                         class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
                                     >
-                                        texto descriptivo
+                                        Crea tus ficheros
                                     </p>
                                 </div>
 
@@ -426,7 +477,7 @@ onMounted(() => {
                                     />
                                 </svg>
                             </a>
-                            <a href="https://laracasts.com"
+                            <a href="#pomodoro" @click.prevent="mostrarInfoCartasPomodoro"
                                 class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                                 <div>
                                     <div
@@ -435,13 +486,13 @@ onMounted(() => {
                                     </div>
 
                                     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
-                                        Optimiza tu tiempo
+                                        Pomodoro
                                     </h2>
 
                                     <p
                                         class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
                                     >
-                                        texto descriptivo
+                                        Optimiza tu tiempo
                                     </p>
                                 </div>
 
@@ -459,7 +510,7 @@ onMounted(() => {
                                     />
                                 </svg>
                             </a>
-                            <a href="https://laracasts.com"
+                            <a href="#calendario" @click.prevent="mostrarInfoCartasCalendario"
                                 class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
                                 <div>
                                     <div
@@ -468,13 +519,13 @@ onMounted(() => {
                                     </div>
 
                                     <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">
-                                        Optimiza tu tiempo
+                                        Calendario
                                     </h2>
 
                                     <p
                                         class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed"
                                     >
-                                        texto descriptivo
+                                    Organiza tus proyectos
                                     </p>
                                 </div>
 
@@ -484,15 +535,82 @@ onMounted(() => {
                                         d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                                 </svg>
                             </a>
-
-
-
                         </div>
                     </div>
-                </section>
-                <!----GALERIA---->
-                <section class="parallax2" :style="{ opacity: opacityValue }">
+
+                    <!----DESCRIPCIONES-->
                     <div>
+                    <blockquote class="texto-fijo">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel harum deserunt laudantium repellendus ipsa aut ipsam ad recusandae iste assumenda, sunt error. Facere quisquam ducimus quidem est qui repellendus aperiam!
+                        </p>
+                    </blockquote>
+
+                    </div>
+                    <div id="organizar" v-if="mostrarInfoOrganizar" :class="{estilosInfoCartas: mostrarInfoOrganizar}">
+                    <div class="container-texto">
+                        <h2 class="text-7xl font-bold ">Kanban</h2>
+                        <h3 class="text-5xl">Cómo Utilizar un Tablero Kanban</h3>
+                            <p>El tablero Kanban es una herramienta visual que te ayuda a gestionar tareas y proyectos de manera eficiente.</p>
+                            
+                    </div>
+                    
+                    <div class="container-img">
+                        <img src="../../../public/assets/images/KANBAN-IMG.png" alt="imagen tablero kanban">
+                    </div>
+                    
+                    </div>
+
+                    <div v-else-if="mostrarInfoDocs" :class="{estilosInfoCartas: mostrarInfoDocs}">
+                        <div class="container-texto">
+                        <h2 class="text-7xl font-bold ">Documentos</h2>
+                        <h3 class="text-5xl">Cómo crear Documentos</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam placeat, quaerat molestias distinctio voluptatibus libero tenetur perspiciatis commodi harum id esse velit inventore culpa odit unde quis porro? Vitae, non.</p>
+                            
+                    </div>
+
+                    <div class="container-img">
+                        
+                        <img src="../../../public/assets/images/Documentos.png" alt="imagen documentos">
+
+                    </div>
+
+                    </div>
+
+                    <div v-else-if="mostrarInfoPomodoro" :class="{estilosInfoCartas: mostrarInfoPomodoro}">
+                        <div class="container-texto">
+                        <h2 class="text-7xl font-bold ">Pomodoro</h2>
+                        <h3 class="text-5xl">Utiliza el metodo pomodoro para organizarte</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam placeat, quaerat molestias distinctio voluptatibus libero tenetur perspiciatis commodi harum id esse velit inventore culpa odit unde quis porro? Vitae, non.</p>
+                            
+                    </div>
+
+                    <div class="container-img">
+                        
+                        <img src="../../../public/assets/images/pomodoro.png" alt="imagen Pomodoro">
+
+                    </div>
+                    </div>
+
+                    <div v-else-if="mostrarInfoCalendario" :class="{estilosInfoCartas: mostrarInfoCalendario}">
+                        <div class="container-texto">
+                        <h2 class="text-7xl font-bold ">Calendario</h2>
+                        <h3 class="text-5xl">Calendario para llevar al dia tus proyectos</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam placeat, quaerat molestias distinctio voluptatibus libero tenetur perspiciatis commodi harum id esse velit inventore culpa odit unde quis porro? Vitae, non.</p>
+                            
+                    </div>
+
+                    <div class="container-img">
+                        
+                        <img src="../../../public/assets/images/calendario.png" alt="imagen Pomodoro">
+
+                    </div>
+                    </div>
+
+                </section>
+                <section class="parallax2" :style="{ opacity: opacityValue }">
+                    <section class="margenes">
+                        <div>
                         <h2 class="h2-768 text-7xl text-white m-20 mb-0 pb-0 p-50 titulo animateanimated animatebackInLeft"
                             ref="animatedH2">
                             Future updates
@@ -509,170 +627,80 @@ onMounted(() => {
                                 ref="animatedButton">
                                 <a href="/dona"
                                     class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Donate</a>
+                                </div>
+                                
                             </div>
-
                         </div>
+                    </section>
+                    
+                        
+                    
+                        <!----GALERIA---->
+        <div class="py-12" >
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <div class="centrado bentoGrid w-[948px] h-[672px] gap-6 relative p-0">
+                    <div class="leftCol w-[424px] h-[672px] absolute gap-6 p-0 left-0 top-0">
+                      <div class="pot w-[424px] h-[225px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
+                        <img src="/images/29369561.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="29369561 w-[125.32px] h-[123px] absolute border shadow-[0px_4px_4px_rgba(0,0,0,0.25)] object-cover p-0 border-[#000000] left-[11px] top-[67px]" />
+                        <span class="easilyCommunicateWithYourTeamThroughTheIntegratedChat font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-sm font-bold text-[#ffffff] text-right tracking-[0px] w-[274px] h-[38px] absolute left-[136px] top-[88px]">Easily communicate with your team through the integrated chat.</span>
+                        <span class="liveChat font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-5xl font-bold text-[#ffffff] text-right tracking-[0px] w-[274px] h-[45px] absolute left-[126px] top-[23px]">Live Chat</span>
+                      </div>
+                      <div class="line w-[424px] h-[125px] absolute gap-6 p-0 left-0 top-[249px]">
+                        <div class="pot w-[200px] h-[125px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
+                          <span class="integrationWithNotion font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-center tracking-[0px] w-[161px] h-[66px] absolute left-[19px] top-0">Integration with Notion </span>
+                          <img src="/images/notionIcon1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="notionIcon1 w-[57px] h-[57px] absolute object-cover p-0 left-[71px] top-[62px]" />
+                        </div>
+                        <div class="pot w-[200px] h-[125px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-56 top-0">
+                          <span class="integrationWithFigma font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-center tracking-[0px] w-[161px] h-[66px] absolute left-[22px] top-0">Integration with Figma</span>
+                          <img src="/images/1667pxFigmaLogo1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="1667pxFigmaLogo1 w-10 h-[59.99px] absolute object-cover p-0 left-[83px] top-[58px]" />
+                        </div>
+                      </div>
+                      <div class="pot w-[424px] h-[100px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-[398px]">
+                        <span class="receiveImportantNotificationsToStayAlwaysUpToDateOfYourProjects font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[15px] font-bold text-[#ffffff] text-left tracking-[0px] w-[343px] h-[34px] absolute left-[23px] top-[50px]">Receive important notifications to always stay up to date with your projects.</span>
+                        <span class="notifications font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-2xl font-bold text-[#ffffff] text-left tracking-[0px] w-[249px] h-[34px] absolute left-[23px] top-4">Notifications</span>
+                      </div>
+                      <div class="pot w-[424px] h-[150px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-[522px]">
+                        <span class="googleCalendar font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[28px] font-bold text-[#ffffff] text-right tracking-[0px] absolute left-[177px] top-3">Google Calendar</span>
+                        <span class="syncYourGoogleCalendarToNeverMissAnImportantAppointment font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[13px] font-bold text-[#ffffff] text-right tracking-[0px] w-[276px] h-[51px] absolute left-[130px] top-[53px]">Sync your Google calendar to never miss an important appointment.</span>
+                        <img src="/images/googleCalendaricon20201.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="googleCalendaricon20201 w-[86px] h-[91px] absolute object-cover p-0 left-[21px] top-[33px]" />
+                      </div>
                     </div>
-
-                    <div class="grid-container">
-                        <div
-                            class="grid-item grid-item-1 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Notifications_alert_badge_-_1_alert.svg/1024px-Notifications_alert_badge_-_1_alert.svg.png"
-                                />
-                            </a>
+                    <div class="centerCol w-[500px] h-[672px] absolute gap-6 p-0 left-[448px] top-0">
+                      <div class="line w-[500px] h-[200px] absolute gap-6 p-0 left-0 top-0">
+                        <div class="pot w-[300px] h-[200px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
+                          <img src="/images/spotifylogowithouttext1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="spotifylogowithouttext1 w-[60px] h-[60px] absolute object-cover p-0 left-[126px] top-[120px]" />
+                          <span class="listenToYourFavoriteMusicDirectlyFromTheApp font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[13px] font-bold text-[#ffffff] text-center tracking-[0px] w-[274px] h-[45px] absolute left-[19px] top-[55px]"> Listen to your favorite music directly from the app.</span>
+                          <span class="spotify font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[32px] font-bold text-[#ffffff] text-center tracking-[0px] w-[274px] h-[45px] absolute left-[19px] top-2.5">Spotify</span>
                         </div>
-                        <div
-                            class="grid-item grid-item-2 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://www.svgrepo.com/show/353655/discord-icon.svg"
-                                />
-                            </a>
+                        <div class="pot w-44 h-[200px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-[324px] top-0">
+                          <img src="/images/252311.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="252311 w-[62px] h-[60px] absolute object-cover p-0 left-[61px] top-[119px]" />
+                          <span class="keepYourCodeAndProjectsOrganizedWithGitHubIntegration font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-xs font-bold text-[#ffffff] text-center tracking-[0px] w-[154px] h-[45px] absolute left-[15px] top-[58px]">Keep your code and projects organized with GitHub integration.</span>
+                          <span class="github font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[32px] font-bold text-[#ffffff] text-center tracking-[0px] w-[274px] h-[45px] absolute left-[-45px] top-2.5">Github</span>
                         </div>
-                        <div
-                            class="grid-item grid-item-3 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/notion-icon.png"
-                                />
-                            </a>
+                      </div>
+                      <div class="pot w-[500px] h-[246px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-56">
+                        <span class="aI font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-5xl font-bold text-[#ffffff] text-center tracking-[0px] w-[304px] absolute left-[-89px] top-2.5">AI</span>
+                        <span class="ourApplicationWillUseGPT4ToEnhanceTheUserExperience font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-left tracking-[0px] w-[310px] h-[68px] absolute left-9 top-14">Our application will use GPT-4 to enhance the user experience</span>
+                        <img src="/images/image1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="image1 w-[134px] h-[134px] absolute object-cover p-0 left-[346px] top-[90px]" />
+                      </div>
+                      <div class="frame1 w-[500px] h-[150px] absolute gap-6 p-0 left-0 top-[522px]">
+                        <div class="pot w-[126px] h-[150px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
+                          <span class="vestaPortal font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-center tracking-[0px] w-[141px] absolute -left-2 top-1">Vesta Portal</span>
+                          <span class="easilyShareYourProjectsWithYourTeamForSeamlessCollaborationAndOrganization font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[11px] font-bold text-[#ffffff] text-center tracking-[0px] w-[100px] absolute left-[13px] top-10"> Easily share your projects with your team for seamless collaboration and organization.</span>
                         </div>
-                        <div
-                            class="grid-item grid-item-4 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://store-images.s-microsoft.com/image/apps.47763.13959754522315136.87be3224-9693-4fd4-8cd4-af6362fb8d37.b3c24453-164b-4d03-b561-e77aec7c076a"
-                                />
-                            </a>
+                        <div class="pot w-[200px] h-[150px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-[150px] top-0">
+                          <span class="userCustomization font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-center tracking-[0px] w-[141px] absolute left-[29px] top-1">User Customization</span>
+                          <span class="personalizeYourExperienceWithCustomizableThemesAndSettings font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[11px] font-bold text-[#ffffff] text-center tracking-[0px] w-[123px] h-[68px] absolute left-[38px] top-14">Personalize your experience with customizable themes and settings</span>
                         </div>
-                        <div
-                            class="grid-item grid-item-5 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://images.ctfassets.net/9haz2glq4wt0/4ezP92SinACA9I2x9EwDv6/678adbc1f4f35654e88b2865ced18049/Capacities_Logo_-_PNG.png"
-                                />
-                            </a>
+                        <div class="pot w-[126px] h-[150px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-[374px] top-0">
+                          <span class="useAdvancedPlanningToolsToManageYourTimeAndTasks font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[11px] font-bold text-[#ffffff] text-center tracking-[0px] w-[100px] absolute left-[13px] top-14">Use advanced planning tools to manage your time and tasks</span>
+                          <span class="smartPlanning font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-center tracking-[0px] w-[100px] absolute left-[13px] top-1">Smart Planning</span>
                         </div>
-                        <div
-                            class="grid-item grid-item-6 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Calendar_icon_%282020%29.svg/2048px-Google_Calendar_icon_%282020%29.svg.png"
-                                />
-                            </a>
-                        </div>
-                        <div
-                            class="grid-item grid-item-7 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://cdn-icons-png.flaticon.com/512/2936/2936956.png"
-                                />
-                            </a>
-                        </div>
-                        <div
-                            class="grid-item grid-item-8 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png"
-                                />
-                            </a>
-                        </div>
-                        <div
-                            class="grid-item grid-item-9 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://wiki.hornbill.com/images/4/46/Azure_ai_logo.png"
-                                />
-                            </a>
-                        </div>
-
-                        <div
-                            class="grid-item grid-item-10 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://cdn-icons-png.flaticon.com/512/4730/4730517.png"
-                                />
-                            </a>
-                        </div>
-
-                        <div
-                            class="grid-item grid-item-11 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://luna1.co/dc739c.png"
-                                />
-                            </a>
-                        </div>
-
-                        <div
-                            class="grid-item grid-item-12 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                />
-                            </a>
-                        </div>
-                        <div
-                            class="grid-item grid-item-13 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/2048px-Spotify_logo_without_text.svg.png"
-                                />
-                            </a>
-                        </div>
-                        <div
-                            class="grid-item grid-item-14 flex items-center justify-center"
-                        >
-                            <!---ICONO-->
-                            <a class="" href="#">
-                                <img
-                                    class="grid-gallery__image"
-                                    src="https://play-lh.googleusercontent.com/0j8Ksxq3X5pX65gLoUIyyL3pKW877nfwiDA4__gfBb7O_tUxLUqoXwENsaN-onlMQ8s"
-                                />
-                            </a>
-                        </div>
+                      </div>
                     </div>
+                  </div>
+            </div>
+        </div>
                 </section>
             </div>
         </div>
@@ -684,4 +712,73 @@ onMounted(() => {
 <style>
 @import '../../css/welcome.css';
 @import '../../css/footer.css';
+
+</style>
+
+<style scoped >
+
+.estilosInfoCartas {
+   
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 50px auto;
+  max-width: 1120px;
+  text-align: center;
+  background-color: rgba(90, 107, 139, 0.658);
+  padding: 2em;
+  border-radius: 8px;
+  display: inline-flex;
+
+  position: relative;
+  left:50px;
+}
+
+.estilosInfoCartas h2{
+    text-align: left;
+  
+  
+}
+
+.estilosInfoCartas h3{
+    text-align: left;
+    
+   
+   
+}
+.estilosInfoCartas p{
+    text-align: left;
+   
+   
+   
+
+}
+.container-texto{
+    display: block;
+   
+}
+
+.container-img img{
+    padding-top: 30px;
+    margin: auto;
+    
+}
+.centrado{
+    margin: auto;
+}
+.texto-fijo{
+
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 50px auto;
+    max-width: 800px;
+    text-align: center;
+    background-color: rgb(26, 42, 71);
+    padding: 1em;
+    border-radius: 8px;
+
+}
 </style>
