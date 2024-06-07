@@ -86,23 +86,26 @@ function onSubmit(closePopover) {
         </Popover>
       </div>
     </template>
-    <div class="px-4 py-6 h-full overflow-y-auto min-h-96">
-        <div class="mx-auto max-w-5xl">
-
-
-          <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <li
-              v-for="board in boards"
-              :key="board.id"
-              class="relative bg-gray-400 hover:bg-gray-500 rounded-md min-h-[7rem]">
-              <Link
-                :href="route('boards.show', {board: board.id})"
-                class="absolute inset-0 p-3 text-lg font-bold text-white">
-                {{ board.name }}
-              </Link>
-            </li>
-          </ul>
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 my-16">
+        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="px-4 py-6 h-full overflow-y-auto">
+                <div class="mx-auto max-w-5xl">
+                  <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <li
+                      v-for="board in boards"
+                      :key="board.id"
+                      class="relative bg-gray-400 hover:bg-gray-500 rounded-md min-h-[7rem]">
+                      <Link
+                        :href="route('boards.show', {board: board.id})"
+                        class="absolute inset-0 p-3 text-lg font-bold text-white">
+                        {{ board.name }}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
         </div>
-      </div>
+    </div>
+
   </AuthenticatedLayout>
 </template>
