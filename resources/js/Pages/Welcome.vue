@@ -132,7 +132,7 @@ onMounted(() => {
 
 
     <!--contenedor global-->
-   
+
         <div class="black-gradiant">
 
 
@@ -172,12 +172,12 @@ onMounted(() => {
                 </template>
             </div>
 
-           
+
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
             <section class="margenes-2">
 
-                
+
                 <div class="flex justify-center ">
                     <svg class="animate__animated animate__fadeIn max-w-2xl flex justify-center mx-auto  p-6 lg:p-8 "
                         version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -330,7 +330,7 @@ onMounted(() => {
                         />
                     </svg>
                 </div>
-                
+
                 <!--flechitas-->
                 <div class="container-flechas">
                     <div class="flex justify-center">
@@ -353,9 +353,9 @@ onMounted(() => {
                         </div>
                     </div>
                 </section>
-                    
+
                     <!--DESCRIPCION DEL PROYECTO-->
-                <section class="margenes">  
+                <section class="margenes">
                 <div class="container-text mx-auto parallax" :style="{ opacity: opacityValue }">
                     <h1 class="  h2-768 text-9xl  text-center text-white m-20 p-50 titulo ">VESTA</h1>
                     <blockquote class="block-768" >
@@ -371,7 +371,7 @@ onMounted(() => {
                         </p>
                     </blockquote>
                 </div>
-                
+
                 <div class="parallax" :style="{ opacity: opacityValue }">
                     <div class=" flex items-center justify-center my-10 animate__animated animate__fadeIn"
                     ref="animatedButton">
@@ -410,7 +410,7 @@ onMounted(() => {
                                     <h2
                                         class="mt-6 text-xl font-semibold text-gray-900 dark:text-white"
                                     >Tabla kanban
-                                        
+
                                     </h2>
 
                                     <p
@@ -419,7 +419,7 @@ onMounted(() => {
                                         Organiza tu trabajo
                                     </p>
                                 </div>
-                        
+
                                 <!--flecha-->
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -436,7 +436,7 @@ onMounted(() => {
                                 </svg>
                             </a>
 
-                                
+
                             <a
                                 href="#doc" @click.prevent="mostrarInfoCartasDocs"
                                 class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500"
@@ -552,13 +552,13 @@ onMounted(() => {
                         <h2 class="text-7xl font-bold ">Kanban</h2>
                         <h3 class="text-5xl">Cómo Utilizar un Tablero Kanban</h3>
                             <p>El tablero Kanban es una herramienta visual que te ayuda a gestionar tareas y proyectos de manera eficiente.</p>
-                            
+
                     </div>
-                    
+
                     <div class="container-img">
                         <img src="../../../public/assets/images/KANBAN-IMG.png" alt="imagen tablero kanban">
                     </div>
-                    
+
                     </div>
 
                     <div v-else-if="mostrarInfoDocs" :class="{estilosInfoCartas: mostrarInfoDocs}">
@@ -566,11 +566,11 @@ onMounted(() => {
                         <h2 class="text-7xl font-bold ">Documentos</h2>
                         <h3 class="text-5xl">Cómo crear Documentos</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam placeat, quaerat molestias distinctio voluptatibus libero tenetur perspiciatis commodi harum id esse velit inventore culpa odit unde quis porro? Vitae, non.</p>
-                            
+
                     </div>
 
                     <div class="container-img">
-                        
+
                         <img src="../../../public/assets/images/Documentos.png" alt="imagen documentos">
 
                     </div>
@@ -582,11 +582,11 @@ onMounted(() => {
                         <h2 class="text-7xl font-bold ">Pomodoro</h2>
                         <h3 class="text-5xl">Utiliza el metodo pomodoro para organizarte</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam placeat, quaerat molestias distinctio voluptatibus libero tenetur perspiciatis commodi harum id esse velit inventore culpa odit unde quis porro? Vitae, non.</p>
-                            
+
                     </div>
 
                     <div class="container-img">
-                        
+
                         <img src="../../../public/assets/images/pomodoro.png" alt="imagen Pomodoro">
 
                     </div>
@@ -597,11 +597,11 @@ onMounted(() => {
                         <h2 class="text-7xl font-bold ">Calendario</h2>
                         <h3 class="text-5xl">Calendario para llevar al dia tus proyectos</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam placeat, quaerat molestias distinctio voluptatibus libero tenetur perspiciatis commodi harum id esse velit inventore culpa odit unde quis porro? Vitae, non.</p>
-                            
+
                     </div>
 
                     <div class="container-img">
-                        
+
                         <img src="../../../public/assets/images/calendario.png" alt="imagen Pomodoro">
 
                     </div>
@@ -609,7 +609,7 @@ onMounted(() => {
 
                 </section>
                 <section class="parallax2" :style="{ opacity: opacityValue }">
-                    <section class="margenes">
+                    <section>
                         <div>
                         <h2 class="h2-768 text-7xl text-white m-20 mb-0 pb-0 p-50 titulo animateanimated animatebackInLeft"
                             ref="animatedH2">
@@ -628,31 +628,31 @@ onMounted(() => {
                                 <a href="/dona"
                                     class="dark:bg-gray-50/50 botonparallax p-3 w-36 flex items-center justify-center rounded-full button-hover">Donate</a>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </section>
-                    
-                        
-                    
+
+
+
                         <!----GALERIA---->
         <div class="py-12" >
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="centrado bentoGrid w-[948px] h-[672px] gap-6 relative p-0">
                     <div class="leftCol w-[424px] h-[672px] absolute gap-6 p-0 left-0 top-0">
                       <div class="pot w-[424px] h-[225px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
-                        <img src="/images/29369561.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="29369561 w-[125.32px] h-[123px] absolute border shadow-[0px_4px_4px_rgba(0,0,0,0.25)] object-cover p-0 border-[#000000] left-[11px] top-[67px]" />
+                        <img src="/assets/images/image1.png" class="29369561 w-[125.32px] h-[123px] absolute object-cover p-0 border-[#000000] left-[11px] top-[67px]" />
                         <span class="easilyCommunicateWithYourTeamThroughTheIntegratedChat font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-sm font-bold text-[#ffffff] text-right tracking-[0px] w-[274px] h-[38px] absolute left-[136px] top-[88px]">Easily communicate with your team through the integrated chat.</span>
                         <span class="liveChat font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-5xl font-bold text-[#ffffff] text-right tracking-[0px] w-[274px] h-[45px] absolute left-[126px] top-[23px]">Live Chat</span>
                       </div>
                       <div class="line w-[424px] h-[125px] absolute gap-6 p-0 left-0 top-[249px]">
                         <div class="pot w-[200px] h-[125px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
                           <span class="integrationWithNotion font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-center tracking-[0px] w-[161px] h-[66px] absolute left-[19px] top-0">Integration with Notion </span>
-                          <img src="/images/notionIcon1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="notionIcon1 w-[57px] h-[57px] absolute object-cover p-0 left-[71px] top-[62px]" />
+                          <img src="/images/notionIcon1.png" class="notionIcon1 w-[57px] h-[57px] absolute object-cover p-0 left-[71px] top-[62px]" />
                         </div>
                         <div class="pot w-[200px] h-[125px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-56 top-0">
                           <span class="integrationWithFigma font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-center tracking-[0px] w-[161px] h-[66px] absolute left-[22px] top-0">Integration with Figma</span>
-                          <img src="/images/1667pxFigmaLogo1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="1667pxFigmaLogo1 w-10 h-[59.99px] absolute object-cover p-0 left-[83px] top-[58px]" />
+                          <img src="/images/1667pxFigmaLogo1.png" class="1667pxFigmaLogo1 w-10 h-[59.99px] absolute object-cover p-0 left-[83px] top-[58px]" />
                         </div>
                       </div>
                       <div class="pot w-[424px] h-[100px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-[398px]">
@@ -662,18 +662,18 @@ onMounted(() => {
                       <div class="pot w-[424px] h-[150px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-[522px]">
                         <span class="googleCalendar font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[28px] font-bold text-[#ffffff] text-right tracking-[0px] absolute left-[177px] top-3">Google Calendar</span>
                         <span class="syncYourGoogleCalendarToNeverMissAnImportantAppointment font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[13px] font-bold text-[#ffffff] text-right tracking-[0px] w-[276px] h-[51px] absolute left-[130px] top-[53px]">Sync your Google calendar to never miss an important appointment.</span>
-                        <img src="/images/googleCalendaricon20201.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="googleCalendaricon20201 w-[86px] h-[91px] absolute object-cover p-0 left-[21px] top-[33px]" />
+                        <img src="/images/googleCalendaricon20201.png" class="googleCalendaricon20201 w-[86px] h-[91px] absolute object-cover p-0 left-[21px] top-[33px]" />
                       </div>
                     </div>
                     <div class="centerCol w-[500px] h-[672px] absolute gap-6 p-0 left-[448px] top-0">
                       <div class="line w-[500px] h-[200px] absolute gap-6 p-0 left-0 top-0">
                         <div class="pot w-[300px] h-[200px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
-                          <img src="/images/spotifylogowithouttext1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="spotifylogowithouttext1 w-[60px] h-[60px] absolute object-cover p-0 left-[126px] top-[120px]" />
+                          <img src="/images/spotifylogowithouttext1.png" class="spotifylogowithouttext1 w-[60px] h-[60px] absolute object-cover p-0 left-[126px] top-[120px]" />
                           <span class="listenToYourFavoriteMusicDirectlyFromTheApp font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[13px] font-bold text-[#ffffff] text-center tracking-[0px] w-[274px] h-[45px] absolute left-[19px] top-[55px]"> Listen to your favorite music directly from the app.</span>
                           <span class="spotify font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[32px] font-bold text-[#ffffff] text-center tracking-[0px] w-[274px] h-[45px] absolute left-[19px] top-2.5">Spotify</span>
                         </div>
                         <div class="pot w-44 h-[200px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-[324px] top-0">
-                          <img src="/images/252311.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="252311 w-[62px] h-[60px] absolute object-cover p-0 left-[61px] top-[119px]" />
+                          <img src="/images/252311.png" class="252311 w-[62px] h-[60px] absolute object-cover p-0 left-[61px] top-[119px]" />
                           <span class="keepYourCodeAndProjectsOrganizedWithGitHubIntegration font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-xs font-bold text-[#ffffff] text-center tracking-[0px] w-[154px] h-[45px] absolute left-[15px] top-[58px]">Keep your code and projects organized with GitHub integration.</span>
                           <span class="github font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-[32px] font-bold text-[#ffffff] text-center tracking-[0px] w-[274px] h-[45px] absolute left-[-45px] top-2.5">Github</span>
                         </div>
@@ -681,7 +681,7 @@ onMounted(() => {
                       <div class="pot w-[500px] h-[246px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-56">
                         <span class="aI font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-5xl font-bold text-[#ffffff] text-center tracking-[0px] w-[304px] absolute left-[-89px] top-2.5">AI</span>
                         <span class="ourApplicationWillUseGPT4ToEnhanceTheUserExperience font-[Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,'Helvetica_Neue',Arial] text-base font-bold text-[#ffffff] text-left tracking-[0px] w-[310px] h-[68px] absolute left-9 top-14">Our application will use GPT-4 to enhance the user experience</span>
-                        <img src="/images/image1.png" onerror="this.src='http://svgur.com/i/x4x.svg'" class="image1 w-[134px] h-[134px] absolute object-cover p-0 left-[346px] top-[90px]" />
+                        <img src="/images/image1.png" class="image1 w-[134px] h-[134px] absolute object-cover p-0 left-[346px] top-[90px]" />
                       </div>
                       <div class="frame1 w-[500px] h-[150px] absolute gap-6 p-0 left-0 top-[522px]">
                         <div class="pot w-[126px] h-[150px] absolute gap-4 overflow-hidden shadow-[inset_0px_4px_4px_rgba(0,0,0,0.25)] bg-[linear-gradient(135deg,#2f2f36,#29292d)] p-0 rounded-2xl left-0 top-0">
@@ -718,7 +718,7 @@ onMounted(() => {
 <style scoped >
 
 .estilosInfoCartas {
-   
+
   color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: 300;
@@ -737,32 +737,32 @@ onMounted(() => {
 
 .estilosInfoCartas h2{
     text-align: left;
-  
-  
+
+
 }
 
 .estilosInfoCartas h3{
     text-align: left;
-    
-   
-   
+
+
+
 }
 .estilosInfoCartas p{
     text-align: left;
-   
-   
-   
+
+
+
 
 }
 .container-texto{
     display: block;
-   
+
 }
 
 .container-img img{
     padding-top: 30px;
     margin: auto;
-    
+
 }
 .centrado{
     margin: auto;
