@@ -34,18 +34,6 @@ const navigateToNosotros = () => {
                     </ul>
                 </div>
 
-                <div class="col-span-2 sm:col-span-1">
-                    <p class="font-medium text-white">Helpful Links</p>
-
-                    <ul class="mt-6 space-y-4 text-sm">
-
-
-                        <li>
-                            <a href="#" class="text-white transition hover:opacity-75"> User Manual </a>
-                        </li>
-                        <li></li>
-                    </ul>
-                </div>
 
                 <div class="col-span-2 sm:col-span-1">
                     <p class="font-medium text-white">Legal</p>

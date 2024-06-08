@@ -1,6 +1,5 @@
 @import 'animate.css';
 
-
 /* Oculta la barra de desplazamiento para Chrome, Safari y Opera */
 ::-webkit-scrollbar {
   display: none;
@@ -14,6 +13,8 @@ body {
   /* Firefox */
   -ms-overflow-style: none;
   /* IE and Edge */
+
+
 
 }
 
@@ -334,7 +335,7 @@ body {
   margin: auto;
 }
 .parallax2 h2{
-  text-align: center;
+  text-align: left;
 }
 .contenedor-derecha{
   margin-bottom: 50px;
@@ -569,10 +570,7 @@ body {
   color: #b3e7ff;
 }
 
-.titulo {
-  font-family: 'Quicksand';
-  font-style: normal;
-}
+
 
 
 
