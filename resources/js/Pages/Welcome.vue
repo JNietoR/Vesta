@@ -64,7 +64,7 @@ onMounted(() => {
 });
 
 
-const activeDiv = ref(null);
+const activeDiv = ref('organizar');
 
 
 
